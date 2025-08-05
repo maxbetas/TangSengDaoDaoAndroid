@@ -54,7 +54,7 @@ public class ChatReadCountCircleProgressBar extends View {
     private static final float DEFAULT_PROGRESS_TEXT_SIZE = 11.0f;
     private static final float DEFAULT_PROGRESS_STROKE_WIDTH = 1.0f;
 
-    private static final String COLOR_FFF2A670 = "#fff2a670";
+    private static final String COLOR_FFF2A670 = "#3399F2";
     private static final String COLOR_FFD3D3D5 = "#ffe3e3e5";
 
     private final RectF mProgressRectF = new RectF();

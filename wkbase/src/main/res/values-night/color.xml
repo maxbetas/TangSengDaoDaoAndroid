@@ -13,8 +13,8 @@
     <color name="chat_border_color">#0B0000</color>
     <color name="chat_received_bg_normal">#222E3A</color>
     <color name="chat_received_bg_selected">#212223</color>
-    <color name="chat_send_bg_normal">#575ba2</color>
-    <color name="chat_send_bg_select">#41469B</color>
+    <color name="chat_send_bg_normal">#1E3A5F</color>
+    <color name="chat_send_bg_select">#1565C0</color>
     <color name="colorSystemBg">#222E3A</color>
     <color name="send_text_color">#ffffff</color>
     <color name="receive_text_color">#ffffff</color>

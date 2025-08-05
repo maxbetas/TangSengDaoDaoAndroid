@@ -228,7 +228,7 @@
                                         android:layout_marginEnd="10dp"
                                         android:layout_marginBottom="3dp"
                                         android:src="@mipmap/flame_small"
-                                        android:tint="#ff2d51"
+                                        android:tint="#3399F2"
                                         android:visibility="gone" />
 
                                     <androidx.appcompat.widget.AppCompatImageView

@@ -42,7 +42,7 @@ class GlobalMessage {
     fun getHtmlText(): String {
         val content = getMessageModel()?.content
         if (!TextUtils.isEmpty(content)) {
-            return content!!.replace("<mark>", "<font color=#f65835>")
+            return content!!.replace("<mark>", "<font color=#3399F2>")
                 .replace("</mark>", "</font>")
         }
         return ""
@@ -53,7 +53,7 @@ class GlobalMessage {
         if (content is String && !TextUtils.isEmpty(content)) {
             return WKBaseApplication.getInstance().application.getString(R.string.last_message_file) + " " + content.replace(
                 "<mark>",
-                "<font color=#f65835>"
+                "<font color=#3399F2>"
             )
                 .replace("</mark>", "</font>")
         }
