@@ -2,7 +2,7 @@ package com.chat.push;
 
 import static org.junit.Assert.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Example local unit test, which will execute on the development machine (host).

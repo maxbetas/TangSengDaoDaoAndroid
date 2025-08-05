@@ -8,16 +8,16 @@ plugins {
 android {
     signingConfigs {
         debug {
-            storeFile file('../demo.jks')
-            storePassword 'demo1365'
-            keyAlias = 'demo'
-            keyPassword 'demo1365'
+            storeFile file('../sign.jks')
+            storePassword 'pZ4KU5jAMDRmxQ3f4KWA'
+            keyAlias = 'xingxunliao'
+            keyPassword 'pZ4KU5jAMDRmxQ3f4KWA'
         }
         release {
-            storeFile file('../demo.jks')
-            storePassword 'demo1365'
-            keyAlias = 'demo'
-            keyPassword 'demo1365'
+            storeFile file('../sign.jks')
+            storePassword 'pZ4KU5jAMDRmxQ3f4KWA'
+            keyAlias = 'xingxunliao'
+            keyPassword 'pZ4KU5jAMDRmxQ3f4KWA'
         }
     }
     namespace 'com.xingxun.xingxunliao'
