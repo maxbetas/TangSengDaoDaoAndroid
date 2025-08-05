@@ -20,14 +20,14 @@ android {
             keyPassword 'demo1365'
         }
     }
-    namespace 'com.test.demo'
+    namespace 'com.xingxun.xingxunliao'
     compileSdk rootProject.ext.compileSdkVersion
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
 
 
     defaultConfig {
-        applicationId "com.test.demo"
+        applicationId "com.xingxun.xingxunliao"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -68,9 +68,6 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = '17'
     }
     buildFeatures {
         viewBinding true
