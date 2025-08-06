@@ -1,0 +1,4 @@
+/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/java/com/chat/groupmanage/adapter/SelectedAdapter.kt
+/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/java/com/chat/groupmanage/adapter/OutUserAdapter.kt
+/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/java/com/chat/groupmanage/adapter/ChooseNormalMemberAdapter.kt
+/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/java/com/chat/groupmanage/ui/OutGroupMembersActivity.kt

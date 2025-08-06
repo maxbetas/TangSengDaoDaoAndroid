@@ -1,0 +1,32 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.chat.groupmanage" >
+4
+5    <uses-sdk android:minSdkVersion="21" />
+6
+7    <application>
+7-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:3:5-12:19
+8        <activity android:name="com.chat.groupmanage.ui.GroupManageActivity" />
+8-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:4:9-60
+8-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:4:19-57
+9        <activity
+9-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:5:9-7:76
+10            android:name="com.chat.groupmanage.ui.ChooseNormalMembersActivity"
+10-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:6:13-59
+11            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+11-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:7:13-73
+12        <activity android:name="com.chat.groupmanage.ui.GroupBlacklistActivity" />
+12-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:8:9-63
+12-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:8:19-60
+13        <activity android:name="com.chat.groupmanage.ui.ForbiddenWitchGroupMemberActivity" />
+13-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:9:9-74
+13-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:9:19-71
+14        <activity android:name="com.chat.groupmanage.ui.OutGroupMembersActivity" />
+14-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:10:9-64
+14-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:10:19-61
+15        <activity android:name="com.chat.groupmanage.ui.GroupHeaderActivity" />
+15-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:11:9-80
+15-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkgroupmanage/src/main/AndroidManifest.xml:11:19-77
+16    </application>
+17
+18</manifest>

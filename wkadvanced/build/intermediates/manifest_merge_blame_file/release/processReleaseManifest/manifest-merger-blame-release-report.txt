@@ -1,0 +1,38 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.chat.advanced" >
+4
+5    <uses-sdk android:minSdkVersion="21" />
+6
+7    <application>
+7-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:4:5-15:19
+8        <activity android:name="com.chat.advanced.ui.MsgRemindActivity" />
+8-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:5:9-58
+8-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:5:19-55
+9        <activity android:name="com.chat.advanced.ui.search.ChatWithDateActivity" />
+9-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:6:9-68
+9-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:6:19-65
+10        <activity android:name="com.chat.advanced.ui.search.ChatImgActivity" />
+10-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:7:9-63
+10-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:7:19-60
+11        <activity android:name="com.chat.advanced.ui.search.ChatWithFromUIDActivity" />
+11-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:8:9-71
+11-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:8:19-68
+12        <activity android:name="com.chat.advanced.ui.search.RecordActivity" />
+12-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:9:9-62
+12-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:9:19-59
+13        <activity android:name="com.chat.advanced.ui.search.SearchAllMembersActivity" />
+13-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:10:9-72
+13-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:10:19-69
+14        <activity android:name="com.chat.advanced.ui.ReadMsgMembersActivity" />
+14-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:11:9-63
+14-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:11:19-60
+15        <activity android:name="com.chat.advanced.ui.ChatBgListActivity" />
+15-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:12:9-59
+15-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:12:19-56
+16        <activity android:name="com.chat.advanced.ui.PreviewChatBgActivity" />
+16-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:13:9-62
+16-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:13:19-59
+17    </application>
+18
+19</manifest>

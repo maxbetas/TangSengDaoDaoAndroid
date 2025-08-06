@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chat.advanced" >
+
+    <uses-sdk android:minSdkVersion="21" />
+
+    <application>
+        <activity android:name="com.chat.advanced.ui.MsgRemindActivity" />
+        <activity android:name="com.chat.advanced.ui.search.ChatWithDateActivity" />
+        <activity android:name="com.chat.advanced.ui.search.ChatImgActivity" />
+        <activity android:name="com.chat.advanced.ui.search.ChatWithFromUIDActivity" />
+        <activity android:name="com.chat.advanced.ui.search.RecordActivity" />
+        <activity android:name="com.chat.advanced.ui.search.SearchAllMembersActivity" />
+        <activity android:name="com.chat.advanced.ui.ReadMsgMembersActivity" />
+        <activity android:name="com.chat.advanced.ui.ChatBgListActivity" />
+        <activity android:name="com.chat.advanced.ui.PreviewChatBgActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,54 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:2:1-17:12
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:2:1-17:12
+	package
+		INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:4:5-15:19
+activity#com.chat.advanced.ui.MsgRemindActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:5:9-58
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:5:19-55
+activity#com.chat.advanced.ui.search.ChatWithDateActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:6:9-68
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:6:19-65
+activity#com.chat.advanced.ui.search.ChatImgActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:7:9-63
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:7:19-60
+activity#com.chat.advanced.ui.search.ChatWithFromUIDActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:8:9-71
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:8:19-68
+activity#com.chat.advanced.ui.search.RecordActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:9:9-62
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:9:19-59
+activity#com.chat.advanced.ui.search.SearchAllMembersActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:10:9-72
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:10:19-69
+activity#com.chat.advanced.ui.ReadMsgMembersActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:11:9-63
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:11:19-60
+activity#com.chat.advanced.ui.ChatBgListActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:12:9-59
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:12:19-56
+activity#com.chat.advanced.ui.PreviewChatBgActivity
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:13:9-62
+	android:name
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml:13:19-59
+uses-sdk
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/wkadvanced/src/main/AndroidManifest.xml

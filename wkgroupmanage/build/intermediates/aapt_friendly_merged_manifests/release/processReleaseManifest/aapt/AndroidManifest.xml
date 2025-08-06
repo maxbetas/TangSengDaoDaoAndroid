@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chat.groupmanage" >
+
+    <uses-sdk android:minSdkVersion="21" />
+
+    <application>
+        <activity android:name="com.chat.groupmanage.ui.GroupManageActivity" />
+        <activity
+            android:name="com.chat.groupmanage.ui.ChooseNormalMembersActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity android:name="com.chat.groupmanage.ui.GroupBlacklistActivity" />
+        <activity android:name="com.chat.groupmanage.ui.ForbiddenWitchGroupMemberActivity" />
+        <activity android:name="com.chat.groupmanage.ui.OutGroupMembersActivity" />
+        <activity android:name="com.chat.groupmanage.ui.GroupHeaderActivity" />
+    </application>
+
+</manifest>
