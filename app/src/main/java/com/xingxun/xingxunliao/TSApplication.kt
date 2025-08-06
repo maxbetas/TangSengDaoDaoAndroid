@@ -32,12 +32,15 @@ import com.chat.base.utils.language.WKMultiLanguageUtil
 import com.chat.groupmanage.WKGroupManageApplication
 import com.chat.login.WKLoginApplication
 import com.chat.push.WKPushApplication
+import com.chat.rtc.WKUIRTCApplication
 import com.chat.scan.WKScanApplication
 import com.chat.uikit.TabActivity
 import com.chat.uikit.WKUIKitApplication
 import com.chat.uikit.chat.manager.WKIMUtils
 import com.chat.uikit.user.service.UserModel
+import org.webrtc.PeerConnection
 import kotlin.system.exitProcess
+
 
 class TSApplication : MultiDexApplication() {
     override fun onCreate() {
@@ -108,11 +111,23 @@ class TSApplication : MultiDexApplication() {
         // 引入高级功能模块
         WKAdvancedApplication.instance.init()
         // 引入音视频通话模块
-       // WKRTCApplication.getInstance().initModule(this, null)
+        WKUIRTCApplication.init(list=getList())
         addAppFrontBack()
         addListener()
     }
-
+ 
+   private fun getList(): ArrayList<PeerConnection.IceServer> {
+        val iceServer = PeerConnection.IceServer.builder(
+            // rtc服务器地址
+            "turn:xx.xx.xx.x:xxxx?transport=udp"
+            // 用户名
+        ).setUsername("xxx").setPassword(
+            "xxx" //密码
+        ).createIceServer()
+        val iceServers: ArrayList<PeerConnection.IceServer> = ArrayList()
+        iceServers.add(iceServer)
+        return iceServers
+    }
     private fun initApi() {
         var apiURL = WKSharedPreferencesUtil.getInstance().getSP("api_base_url")
         if (TextUtils.isEmpty(apiURL)) {
