@@ -17,6 +17,7 @@ import android.os.Looper
 import android.os.Process
 import android.text.TextUtils
 import androidx.multidex.MultiDexApplication
+import com.chat.advanced.WKAdvancedApplication
 import com.chat.base.WKBaseApplication
 import com.chat.base.config.WKApiConfig
 import com.chat.base.config.WKConfig
@@ -28,6 +29,7 @@ import com.chat.base.utils.ActManagerUtils
 import com.chat.base.utils.WKPlaySound
 import com.chat.base.utils.WKTimeUtils
 import com.chat.base.utils.language.WKMultiLanguageUtil
+import com.chat.groupmanage.WKGroupManageApplication
 import com.chat.login.WKLoginApplication
 import com.chat.push.WKPushApplication
 import com.chat.scan.WKScanApplication
@@ -101,6 +103,12 @@ class TSApplication : MultiDexApplication() {
         WKScanApplication.getInstance().init(this)
         WKUIKitApplication.getInstance().init(this)
         WKPushApplication.getInstance().init(getAppPackageName(), this)
+        // 引入群管理模块
+        WKGroupManageApplication.getInstance().init()
+        // 引入高级功能模块
+        WKAdvancedApplication.instance.init()
+        // 引入音视频通话模块
+       // WKRTCApplication.getInstance().initModule(this, null)
         addAppFrontBack()
         addListener()
     }

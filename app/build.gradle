@@ -89,4 +89,7 @@ dependencies {
     implementation project(path: ':wklogin')
     implementation project(path: ':wkscan')
     implementation project(path: ':wkpush')
+    implementation project(path: ':wkrtc')
+    implementation project(path: ':wkadvanced')
+    implementation project(path: ':wkgroupmanage')
 }

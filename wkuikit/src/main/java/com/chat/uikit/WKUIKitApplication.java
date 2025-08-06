@@ -179,7 +179,7 @@ public class WKUIKitApplication {
             String uid = WKConfig.getInstance().getUid();
             WKIM.getInstance().init(mContext.get(), uid, imToken);
 
-            CrashReport.initCrashReport(getContext(), "b8bf09f25f", false);
+            CrashReport.initCrashReport(getContext(), "Nokey", false);
             CrashReport.setUserId(WKConfig.getInstance().getUid());
             CrashReport.setDeviceModel(getContext(), WKDeviceUtils.getInstance().getSystemModel());
 
