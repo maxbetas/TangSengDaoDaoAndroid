@@ -115,14 +115,14 @@ class TSApplication : MultiDexApplication() {
         addAppFrontBack()
         addListener()
     }
- 
+
    private fun getList(): ArrayList<PeerConnection.IceServer> {
         val iceServer = PeerConnection.IceServer.builder(
             // rtc服务器地址
-            "turn:xx.xx.xx.x:xxxx?transport=udp"
+            "turn:live.xingxunliao.com:3478?transport=tcp"
             // 用户名
-        ).setUsername("xxx").setPassword(
-            "xxx" //密码
+        ).setUsername("JBybYMbCTbmyVcU5xkRn").setPassword(
+            "DyQfhHrcKKNMETbnyH3G" //密码
         ).createIceServer()
         val iceServers: ArrayList<PeerConnection.IceServer> = ArrayList()
         iceServers.add(iceServer)
@@ -131,7 +131,7 @@ class TSApplication : MultiDexApplication() {
     private fun initApi() {
         var apiURL = WKSharedPreferencesUtil.getInstance().getSP("api_base_url")
         if (TextUtils.isEmpty(apiURL)) {
-            apiURL = "https://api.chemyour.com"
+            apiURL = "https://api.xingxunliao.com"
             WKApiConfig.initBaseURL(apiURL)
         } else {
             WKApiConfig.initBaseURLIncludeIP(apiURL)
