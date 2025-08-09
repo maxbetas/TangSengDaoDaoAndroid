@@ -53,6 +53,12 @@ public class SettingActivity extends WKBaseActivity<ActSettingLayoutBinding> {
     protected void initView() {
         getCacheSize();
         EndpointManager.getInstance().invoke("set_chat_bg_view", new ChatBgItemMenu(this, wkVBinding.chatBgLayout, "", WKChannelType.PERSONAL));
+        
+        // 隐藏企业版模块设置项
+        wkVBinding.moduleLayout.setVisibility(View.GONE);
+        
+        // 隐藏开发日志设置项
+        wkVBinding.errorLogLayout.setVisibility(View.GONE);
     }
 
     @Override
