@@ -53,66 +53,74 @@
 24-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:11:22-77
 25
 26    <application
-26-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:23:5-54:19
+26-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:23:5-60:19
 27        android:allowBackup="true"
 27-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:24:9-35
 28        android:supportsRtl="true" >
 28-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:25:9-35
-29        <activity android:name="com.chat.rtc.multi.ChooseRTCMemberActivity" />
-29-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:26:9-79
-29-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:26:19-76
-30        <activity
-30-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:27:9-32:66
-31            android:name="rtc.conference.MultiCallActivity"
-31-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:28:13-60
-32            android:hardwareAccelerated="true"
-32-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:29:13-47
-33            android:launchMode="singleInstance"
-33-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:30:13-48
-34            android:screenOrientation="portrait"
-34-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:31:13-49
-35            android:theme="@style/Avchat_ActivitySlideRightIn" />
-35-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:32:13-63
-36        <activity
-36-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:33:9-35:47
-37            android:name="rtc.conference.MultiCallWaitingAnswerActivity"
-37-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:34:13-73
-38            android:launchMode="singleTask" />
-38-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:35:13-44
-39        <activity
-39-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:37:9-40:52
-40            android:name="rtc.p2p.P2PVideoCallWaitingAnswerActivity"
-40-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:38:13-69
-41            android:launchMode="singleTask"
-41-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:39:13-44
-42            android:screenOrientation="portrait" />
-42-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:40:13-49
-43        <activity
-43-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:41:9-46:66
-44            android:name="rtc.p2p.CallActivity"
-44-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:42:13-48
-45            android:hardwareAccelerated="true"
-45-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:43:13-47
-46            android:launchMode="singleTask"
-46-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:44:13-44
-47            android:screenOrientation="portrait"
-47-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:45:13-49
-48            android:theme="@style/Avchat_ActivitySlideRightIn" />
-48-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:46:13-63
-49        <activity
-49-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:47:9-53:58
-50            android:name="rtc.conference.MeetingActivity"
-50-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:48:13-58
-51            android:hardwareAccelerated="true"
-51-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:49:13-47
-52            android:launchMode="singleTask"
-52-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:50:13-44
-53            android:screenOrientation="portrait"
-53-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:51:13-49
-54            android:theme="@style/Avchat_ActivitySlideRightIn"
-54-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:52:13-63
-55            android:windowSoftInputMode="adjustResize" />
-55-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:53:13-55
-56    </application>
-57
-58</manifest>
+29
+30        <!-- RTC 成员选择页面 -->
+31        <activity android:name="com.chat.rtc.multi.ChooseRTCMemberActivity" />
+31-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:27:9-79
+31-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:27:19-76
+32
+33        <!-- 多人通话相关 Activity -->
+34        <!-- 注意：MultiCallActivity 已废弃，推荐使用 MeetingActivity -->
+35        <activity
+35-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:31:9-36:66
+36            android:name="rtc.conference.MultiCallActivity"
+36-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:32:13-60
+37            android:hardwareAccelerated="true"
+37-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:33:13-47
+38            android:launchMode="singleInstance"
+38-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:34:13-48
+39            android:screenOrientation="portrait"
+39-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:35:13-49
+40            android:theme="@style/Avchat_ActivitySlideRightIn" />
+40-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:36:13-63
+41        <activity
+41-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:37:9-39:47
+42            android:name="rtc.conference.MultiCallWaitingAnswerActivity"
+42-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:38:13-73
+43            android:launchMode="singleTask" />
+43-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:39:13-44
+44        <!-- 推荐的多人通话实现 -->
+45        <activity
+45-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:41:9-47:58
+46            android:name="rtc.conference.MeetingActivity"
+46-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:42:13-58
+47            android:hardwareAccelerated="true"
+47-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:43:13-47
+48            android:launchMode="singleTask"
+48-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:44:13-44
+49            android:screenOrientation="portrait"
+49-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:45:13-49
+50            android:theme="@style/Avchat_ActivitySlideRightIn"
+50-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:46:13-63
+51            android:windowSoftInputMode="adjustResize" />
+51-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:47:13-55
+52
+53        <!-- P2P 通话相关 Activity -->
+54        <activity
+54-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:50:9-53:52
+55            android:name="rtc.p2p.P2PVideoCallWaitingAnswerActivity"
+55-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:51:13-69
+56            android:launchMode="singleTask"
+56-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:52:13-44
+57            android:screenOrientation="portrait" />
+57-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:53:13-49
+58        <activity
+58-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:54:9-59:66
+59            android:name="rtc.p2p.CallActivity"
+59-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:55:13-48
+60            android:hardwareAccelerated="true"
+60-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:56:13-47
+61            android:launchMode="singleTask"
+61-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:57:13-44
+62            android:screenOrientation="portrait"
+62-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:58:13-49
+63            android:theme="@style/Avchat_ActivitySlideRightIn" />
+63-->/Users/echo/Documents/TangSengDaoDaoAndroid/wkrtc/src/main/AndroidManifest.xml:59:13-63
+64    </application>
+65
+66</manifest>

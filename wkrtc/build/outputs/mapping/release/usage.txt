@@ -143,7 +143,9 @@ rtc.utils.MeetingDataProvider$IMeetingListener:
 rtc.utils.MeetingDataProvider$MultiDataProviderBinder:
     private void <init>()
 rtc.utils.MeetingDataProvider:
+    private static final int MAX_RECONNECT_ATTEMPTS
     private void startCheckRTCStatusReportTimer()
+    private void unPublish()
 rtc.utils.P2PDataProvider$P2PDataProviderBinder:
     private void <init>()
 rtc.utils.RTCAudioPlayer$LiMAudioPlayerBinder:
@@ -152,6 +154,7 @@ rtc.utils.WKFloatingViewManager$LiMFloatingViewManagerBinder:
     private void <init>()
 rtc.utils.WKLogger:
     public void <init>()
+    public static void d(java.lang.String,java.lang.String)
 rtc.utils.WKRTCCommonUtils:
     public void <init>()
 rtc.utils.WKRTCManager$LiMRTCManagerBinder:
@@ -474,8 +477,7 @@ rtc.conference.WKRTCStatusReport:
 rtc.p2p.CallActivity:
     public final int OVERLAY_PERMISSION_REQUEST_CODE
     public static void initView()
-    public final void show()
-    public final void showFloatingView()
+    public static void show()
     public static void stopTimer()
 rtc.p2p.P2PVideoCallWaitingAnswerActivity$1:
     public final synthetic rtc.p2p.P2PVideoCallWaitingAnswerActivity this$0
@@ -533,11 +535,15 @@ rtc.utils.MeetingDataProvider$8:
 rtc.utils.MeetingDataProvider$IMeetingListener
 rtc.utils.MeetingDataProvider:
     public java.util.Timer checkRTCStatusReportTimer
+    public owt.conference.ConferenceInfo conferenceInfo
+    public volatile boolean isInitialized
     public final java.lang.String tag
     public static void addMeetingListener()
+    public static owt.conference.PublishOptions createOptimizedPublishOptions()
     public static void init()
     public static void initConferenceClient$1()
     public static void initListener$1()
+    public static boolean isNetworkError()
     public final void startCountDownTimer$1(java.lang.String)
 rtc.utils.P2PDataProvider$1:
     public final void onUpdated()
@@ -572,12 +578,9 @@ rtc.utils.WKRTCManager:
     public static void createP2PCall()
     public static rtc.inters.IChooseMembers getIChooseMembers()
     public static rtc.inters.ILocalListener getIRTCListener()
-    public static rtc.utils.WKRTCManager getInstance()
     public static java.lang.String getTotalTime()
     public static void joinMultiCall()
     public static void onAccept()
-    public static void onCancel()
-    public static void onHangUp()
     public static void onMultiRefuse()
     public static void onRefuse()
     public static void onSwitchAudio()
@@ -586,6 +589,7 @@ rtc.utils.WKRTCManager:
     public static void receivedRTCMsg()
     public static void removeTimeListener()
     public final void sendMsgAck(long,boolean)
+    public static void setCallingState()
     public final void stopTimer()
 rtc.view.LoadingView$DataBean:
     public final synthetic rtc.view.LoadingView this$0

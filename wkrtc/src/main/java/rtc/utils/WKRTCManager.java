@@ -32,6 +32,7 @@ import rtc.p2p.P2PVideoCallWaitingAnswerActivity;
 /**
  * 5/18/21 11:37 AM
  * 音视频管理
+ * 修复线程安全问题，统一多人通话架构
  */
 public class WKRTCManager {
     private final String tag = "WKRTCManager";
@@ -40,8 +41,12 @@ public class WKRTCManager {
 
     }
 
-    public boolean isShowAnimation = false;
-    public boolean isCalling = false;
+    // 使用 volatile 确保内存可见性
+    public volatile boolean isShowAnimation = false;
+    public volatile boolean isCalling = false;
+
+    // 用于线程安全的锁对象
+    private final Object callStateLock = new Object();
 
     private static final class LiMRTCManagerBinder {
         static final WKRTCManager manager = new WKRTCManager();
@@ -51,84 +56,121 @@ public class WKRTCManager {
         return LiMRTCManagerBinder.manager;
     }
 
-    // 创建多人视频
+    /**
+     * 创建多人视频通话
+     * 线程安全：使用同步锁保护状态变更
+     */
     public void createMultiCall(String channelID, byte channelType, String loginUID, ArrayList<String> uids, String token, String roomID) {
-        if (isCalling) return;
-        for (int i = 0; i < uids.size(); i++) {
-            if (uids.get(i).equals(loginUID)) {
-                uids.remove(i);
-                break;
+        synchronized (callStateLock) {
+            if (isCalling) {
+                WKLogger.w(tag, "创建多人通话失败：正在通话中");
+                return;
             }
+            
+            // 安全复制列表，避免修改原始数据
+            ArrayList<String> safeUids = new ArrayList<>(uids);
+            // 移除自己的UID（如果存在），兼容旧版本API
+            for (int i = safeUids.size() - 1; i >= 0; i--) {
+                if (safeUids.get(i).equals(loginUID)) {
+                    safeUids.remove(i);
+                }
+            }
+            // 将自己添加到第一位
+            safeUids.add(0, loginUID);
+            
+            isShowAnimation = true;
+            Intent intent = new Intent(WKRTCApplication.getInstance().getContext(), MeetingActivity.class);
+            intent.putExtra("token", token);
+            intent.putExtra("channelID", channelID);
+            intent.putExtra("channelType", channelType);
+            intent.putExtra("loginUID", loginUID);
+            intent.putExtra("roomID", roomID);
+            intent.putStringArrayListExtra("uids", safeUids);
+            intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
+            WKRTCApplication.getInstance().getContext().startActivity(intent);
+            isCalling = true;
+            
+            WKLogger.i(tag, "创建多人通话成功，参与者数量：" + safeUids.size());
         }
-        uids.add(0, loginUID);
-        isShowAnimation = true;
-        Intent intent = new Intent(WKRTCApplication.getInstance().getContext(), MeetingActivity.class);
-        intent.putExtra("token", token);
-        intent.putExtra("channelID", channelID);
-        intent.putExtra("channelType", channelType);
-        intent.putExtra("loginUID", loginUID);
-        intent.putExtra("roomID", roomID);
-        intent.putStringArrayListExtra("uids", uids);
-        intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-        WKRTCApplication.getInstance().getContext().startActivity(intent);
-        isCalling = true;
     }
 
-    // 加入多人视频
+    /**
+     * 加入多人视频通话
+     * 线程安全：使用同步锁保护状态变更
+     */
     public void joinMultiCall(String channelID, byte channelType, String inviterUID, String inviterName, String loginUID, ArrayList<String> uids, String token, String roomID) {
-        if (isCalling) return;
-        isShowAnimation = false;
-        Intent intent = new Intent(WKRTCApplication.getInstance().getContext(), MultiCallWaitingAnswerActivity.class);
-        intent.putExtra("token", token);
-        intent.putExtra("channelID", channelID);
-        intent.putExtra("channelType", channelType);
-        intent.putExtra("fromUID", inviterUID);
-        intent.putExtra("fromName", inviterName);
-        intent.putExtra("loginUID", loginUID);
-        intent.putExtra("roomID", roomID);
-        intent.putStringArrayListExtra("uids", uids);
-        intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-        WKRTCApplication.getInstance().getContext().startActivity(intent);
-        isCalling = true;
+        synchronized (callStateLock) {
+            if (isCalling) {
+                WKLogger.w(tag, "加入多人通话失败：正在通话中");
+                return;
+            }
+            
+            isShowAnimation = false;
+            Intent intent = new Intent(WKRTCApplication.getInstance().getContext(), MultiCallWaitingAnswerActivity.class);
+            intent.putExtra("token", token);
+            intent.putExtra("channelID", channelID);
+            intent.putExtra("channelType", channelType);
+            intent.putExtra("fromUID", inviterUID);
+            intent.putExtra("fromName", inviterName);
+            intent.putExtra("loginUID", loginUID);
+            intent.putExtra("roomID", roomID);
+            intent.putStringArrayListExtra("uids", uids != null ? new ArrayList<>(uids) : new ArrayList<>());
+            intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
+            WKRTCApplication.getInstance().getContext().startActivity(intent);
+            isCalling = true;
+            
+            WKLogger.i(tag, "加入多人通话，邀请者：" + inviterUID);
+        }
     }
 
+    /**
+     * 接听P2P通话
+     * 线程安全：使用同步锁保护状态变更
+     */
     public void joinP2PCall(String inviterUID, String inviterName, String loginUID, int callType) {
-        if (isCalling) {
-            WKLogger.e(tag, "通话中->");
-            return;
+        synchronized (callStateLock) {
+            if (isCalling) {
+                WKLogger.w(tag, "接听P2P通话失败：正在通话中");
+                return;
+            }
+            
+            isCalling = true;
+            Intent intent = new Intent(WKRTCApplication.getInstance().getContext(), CallActivity.class);
+            intent.putExtra("toUID", inviterUID);
+            intent.putExtra("callType", callType);
+            intent.putExtra("toName", inviterName);
+            intent.putExtra("isCreate", false);
+            intent.putExtra("loginUID", loginUID);
+            intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
+            WKRTCApplication.getInstance().getContext().startActivity(intent);
+            
+            WKLogger.i(tag, "接听P2P通话：" + inviterUID + "，类型：" + callType);
         }
-        isCalling = true;
-        Intent   intent = new Intent(WKRTCApplication.getInstance().getContext(), CallActivity.class);
-//        if (callType == WKRTCCallType.video) {
-//            intent = new Intent(WKRTCApplication.getInstance().getContext(), P2PVideoCallWaitingAnswerActivity.class);
-//        } else {
-//            intent = new Intent(WKRTCApplication.getInstance().getContext(), CallActivity.class);
-//        }
-        intent.putExtra("toUID", inviterUID);
-        intent.putExtra("callType", callType);
-        intent.putExtra("toName", inviterName);
-        intent.putExtra("isCreate", false);
-        intent.putExtra("loginUID", loginUID);
-        intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-        WKRTCApplication.getInstance().getContext().startActivity(intent);
     }
 
-    // 创建一对一视频
+    /**
+     * 创建P2P通话
+     * 线程安全：使用同步锁保护状态变更
+     */
     public void createP2PCall(String loginUID, String toUID, String toName, int callType) {
-        if (isCalling) {
-            WKLogger.e(tag, "createP2PCall 正在通话中-->");
-            return;
+        synchronized (callStateLock) {
+            if (isCalling) {
+                WKLogger.w(tag, "创建P2P通话失败：正在通话中");
+                return;
+            }
+            
+            isCalling = true;
+            Intent intent = new Intent(WKRTCApplication.getInstance().getContext(), CallActivity.class);
+            intent.putExtra("callType", callType);
+            intent.putExtra("loginUID", loginUID);
+            intent.putExtra("toUID", toUID);
+            intent.putExtra("toName", toName);
+            intent.putExtra("isCreate", true);
+            intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
+            WKRTCApplication.getInstance().getContext().startActivity(intent);
+            
+            WKLogger.i(tag, "创建P2P通话：" + toUID + "，类型：" + callType);
         }
-        isCalling = true;
-        Intent intent = new Intent(WKRTCApplication.getInstance().getContext(), CallActivity.class);
-        intent.putExtra("callType", callType);
-        intent.putExtra("loginUID", loginUID);
-        intent.putExtra("toUID", toUID);
-        intent.putExtra("toName", toName);
-        intent.putExtra("isCreate", true);
-        intent.addFlags(FLAG_ACTIVITY_NEW_TASK);
-        WKRTCApplication.getInstance().getContext().startActivity(intent);
-
     }
 
 
@@ -185,7 +227,10 @@ public class WKRTCManager {
 
     public void onHangUp(String channelID, byte channelType, int second) {
         if (localListener != null) localListener.onHangUp(channelID, channelType, second);
-        isCalling = false;
+        synchronized (callStateLock) {
+            isCalling = false;
+        }
+        WKLogger.i(tag, "通话结束：" + channelID + "，时长：" + second + "秒");
     }
 
     public void onMultiRefuse(String roomID, String uid) {
@@ -216,14 +261,30 @@ public class WKRTCManager {
     public void onRefuse(String channelID, byte channelType, String uid) {
         RTCAudioPlayer.getInstance().stopPlay();
         if (localListener != null) localListener.onRefuse(channelID, channelType, uid);
-        isCalling = false;
+        synchronized (callStateLock) {
+            isCalling = false;
+        }
+        WKLogger.i(tag, "通话拒绝：" + channelID + "，用户：" + uid);
     }
 
     public void onCancel(String uid) {
         if (localListener != null) {
             localListener.onCancel(uid);
         }
-        isCalling = false;
+        synchronized (callStateLock) {
+            isCalling = false;
+        }
+        WKLogger.i(tag, "通话取消：" + uid);
+    }
+
+    /**
+     * 线程安全地设置通话状态
+     * 避免外部直接访问锁对象
+     */
+    public void setCallingState(boolean calling) {
+        synchronized (callStateLock) {
+            isCalling = calling;
+        }
     }
 
     private IAvatarLoader iAvatarLoader;

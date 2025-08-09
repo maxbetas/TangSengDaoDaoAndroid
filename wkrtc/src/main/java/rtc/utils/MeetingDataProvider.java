@@ -51,11 +51,41 @@ import rtc.conference.ItemRemoteStream;
 import rtc.conference.WKRTCStatusReport;
 import rtc.inters.ILocalListener;
 
+/**
+ * 多人会议数据提供者
+ * 负责WebRTC会议的生命周期管理、资源清理和状态同步
+ * 
+ * 架构说明：
+ * - 使用 OWT (Open WebRTC Toolkit) 作为 WebRTC 封装层
+ * - 统一的资源管理和错误恢复机制
+ * - 支持网络异常自动重连（最多3次）
+ * - 优化的编解码器配置（H264/VP8 视频，OPUS/PCMU 音频）
+ * 
+ * 技术栈：
+ * - WebRTC: 基于本地 libwebrtc.jar（建议升级到最新版本）
+ * - OWT: Intel Open WebRTC Toolkit（已停止维护，建议迁移到标准 WebRTC）
+ * - 视频分辨率: 720p@30fps（可根据网络情况自适应）
+ * 
+ * 后续优化建议：
+ * 1. 迁移到 Google 官方 WebRTC Android SDK
+ * 2. 添加网络质量监控和自适应码率
+ * 3. 支持 VP9/AV1 等新编解码器
+ * 4. 实现 SFU 模式以提升多人通话性能
+ */
 public class MeetingDataProvider implements ConferenceClient.ConferenceClientObserver {
     private final String tag = "MeetingDataProvider";
 
     private MeetingDataProvider() {
     }
+
+    // 标记是否已初始化，防止重复初始化
+    private volatile boolean isInitialized = false;
+    // 标记是否正在清理资源，防止重复清理
+    private volatile boolean isCleaningUp = false;
+    // 重连次数计数
+    private int reconnectAttempts = 0;
+    // 最大重连次数
+    private static final int MAX_RECONNECT_ATTEMPTS = 3;
 
     @Override
     public void onStreamAdded(RemoteStream remoteStream) {
@@ -113,44 +143,181 @@ public class MeetingDataProvider implements ConferenceClient.ConferenceClientObs
 
     @Override
     public void onServerDisconnected() {
+        WKLogger.i(tag, "服务器断开连接，开始清理资源");
+        cleanupResources();
+        if (iMeetingListener != null) {
+            iMeetingListener.hangup();
+        }
+    }
 
-        WKRTCManager.getInstance().stopTimer();
-        FloatWindow.destroy();
+    /**
+     * 统一的资源清理方法
+     * 线程安全，防止重复清理
+     */
+    private void cleanupResources() {
+        synchronized (this) {
+            if (isCleaningUp) {
+                WKLogger.w(tag, "正在清理资源，跳过重复清理");
+                return;
+            }
+            isCleaningUp = true;
+        }
+
+        try {
+            // 停止计时器
+            WKRTCManager.getInstance().stopTimer();
+            
+            // 清理状态报告定时器
+            if (checkRTCStatusReportTimer != null) {
+                checkRTCStatusReportTimer.cancel();
+                checkRTCStatusReportTimer = null;
+            }
+
+            // 销毁悬浮窗
+            try {
+                FloatWindow.destroy();
+            } catch (Exception e) {
+                WKLogger.e(tag, "销毁悬浮窗失败", e);
+            }
+
+            // 清理本地媒体资源
+            cleanupLocalMedia();
+
+            // 清理远程流资源
+            cleanupRemoteStreams();
+
+            // 清理计时器
+            cleanupTimers();
+
+            // 清理会议客户端
+            cleanupConferenceClient();
+
+            // 重置状态
+            isInitialized = false;
+
+            WKLogger.i(tag, "资源清理完成");
+        } catch (Exception e) {
+            WKLogger.e(tag, "资源清理过程中发生异常", e);
+        } finally {
+            isCleaningUp = false;
+        }
+    }
+
+    /**
+     * 清理本地媒体资源
+     */
+    private void cleanupLocalMedia() {
         if (capturer != null) {
-            capturer.stopCapture();
-            capturer.dispose();
-            capturer = null;
+            try {
+                capturer.stopCapture();
+                capturer.dispose();
+            } catch (Exception e) {
+                WKLogger.e(tag, "清理摄像头失败", e);
+            } finally {
+                capturer = null;
+            }
         }
 
         if (localStream != null) {
-            localStream.dispose();
-            localStream = null;
+            try {
+                localStream.dispose();
+            } catch (Exception e) {
+                WKLogger.e(tag, "清理本地流失败", e);
+            } finally {
+                localStream = null;
+            }
         }
 
-        if (list != null && list.size() > 0) {
-            for (int i = 0; i < list.size(); i++) {
-                if (list.get(i).remoteStream != null) {
-//                    list.get(i).remoteStream.detach(surfaceViewMap.get(list.get(i).uid));
-                    list.get(i).remoteStream.disableAudio();
-                    list.get(i).remoteStream = null;
+        if (publication != null) {
+            try {
+                publication.stop();
+            } catch (Exception e) {
+                WKLogger.e(tag, "停止发布失败", e);
+            } finally {
+                publication = null;
+            }
+        }
+    }
+
+    /**
+     * 清理远程流资源
+     */
+    private void cleanupRemoteStreams() {
+        if (list != null && !list.isEmpty()) {
+            for (ItemRemoteStream item : list) {
+                if (item.remoteStream != null) {
+                    try {
+                        item.remoteStream.disableAudio();
+                    } catch (Exception e) {
+                        WKLogger.e(tag, "清理远程流失败", e);
+                    } finally {
+                        item.remoteStream = null;
+                    }
                 }
             }
             list.clear();
-//            surfaceViewMap.clear();
         }
-        if (timerMap != null && timerMap.size() > 0) {
+
+        if (bigRemoteStream != null) {
+            try {
+                bigRemoteStream.disableAudio();
+            } catch (Exception e) {
+                WKLogger.e(tag, "清理大视图远程流失败", e);
+            } finally {
+                bigRemoteStream = null;
+            }
+        }
+    }
+
+    /**
+     * 清理所有计时器
+     */
+    private void cleanupTimers() {
+        if (timerMap != null && !timerMap.isEmpty()) {
             for (Map.Entry<String, CountDownTimer> entry : timerMap.entrySet()) {
                 if (entry.getValue() != null) {
-                    entry.getValue().cancel();
+                    try {
+                        entry.getValue().cancel();
+                    } catch (Exception e) {
+                        WKLogger.e(tag, "取消计时器失败: " + entry.getKey(), e);
+                    }
                 }
             }
             timerMap.clear();
         }
-        conferenceClient.removeObserver(this);
-        publication = null;
-        conferenceClient = null;
-        iMeetingListener.hangup();
+    }
 
+    /**
+     * 清理会议客户端资源
+     */
+    private void cleanupConferenceClient() {
+        if (conferenceClient != null) {
+            try {
+                conferenceClient.removeObserver(this);
+                // 注意：不要调用 conferenceClient.leave()，因为这里是断开连接的回调
+            } catch (Exception e) {
+                WKLogger.e(tag, "清理会议客户端失败", e);
+            } finally {
+                conferenceClient = null;
+                conferenceInfo = null;
+            }
+        }
+    }
+
+    /**
+     * 判断是否为网络相关错误，支持自动重连
+     */
+    private boolean isNetworkError(OwtError error) {
+        if (error == null || error.errorMessage == null) {
+            return false;
+        }
+        
+        String errorMsg = error.errorMessage.toLowerCase();
+        return errorMsg.contains("network") || 
+               errorMsg.contains("connection") || 
+               errorMsg.contains("timeout") ||
+               errorMsg.contains("socket") ||
+               errorMsg.contains("disconnect");
     }
 
     private static class MultiDataProviderBinder {
@@ -164,6 +331,7 @@ public class MeetingDataProvider implements ConferenceClient.ConferenceClientObs
     private IMeetingListener iMeetingListener;
     private final ExecutorService executor = Executors.newSingleThreadExecutor();
     private ConferenceClient conferenceClient;
+    private ConferenceInfo conferenceInfo;
     public String roomID, token, loginUID, channelID;
     public byte channelType = 2;
     public LocalStream localStream;
@@ -316,92 +484,155 @@ public class MeetingDataProvider implements ConferenceClient.ConferenceClientObs
     }
 
 
+    /**
+     * 发布本地音视频流
+     * 优化了编解码器配置和视频质量参数
+     */
     private void publish() {
         executor.execute(() -> {
-            if (capturer == null) {
-                capturer = OwtVideoCapturer.create(160, 120, 30, true, true);
-                localStream = new LocalStream(capturer, new MediaConstraints.AudioTrackConstraints());
-            }
-            // 默认关闭视频
-//            localStream.enableVideo();
-            localStream.disableVideo();
-            localStream.enableAudio();
-            PublishOptions options;
-            VideoEncodingParameters h264 = new VideoEncodingParameters(H264);
-            VideoEncodingParameters vp8 = new VideoEncodingParameters(VP8);
-            VideoEncodingParameters vp9 = new VideoEncodingParameters(VP9);
-            options = PublishOptions.builder()
-                    .addVideoParameter(vp8)
-                    .addVideoParameter(h264)
-                    .addVideoParameter(vp9)
-                    .build();
-            ActionCallback<Publication> callback = new ActionCallback<Publication>() {
+            try {
+                if (capturer == null) {
+                    // 使用更合理的视频分辨率 720p 30fps，支持前后摄像头切换
+                    capturer = OwtVideoCapturer.create(1280, 720, 30, true, true);
+                    localStream = new LocalStream(capturer, new MediaConstraints.AudioTrackConstraints());
+                }
+                
+                // 默认状态：音频开启，视频关闭（节省带宽）
+                localStream.enableAudio();
+                localStream.disableVideo();
+                
+                // 优化编解码器配置：优先使用硬件加速的 H264，备选 VP8
+                PublishOptions options = createOptimizedPublishOptions();
+                
+                ActionCallback<Publication> callback = new ActionCallback<Publication>() {
                 @Override
                 public void onSuccess(final Publication result) {
                     publication = result;
-                    WKRTCManager.getInstance().getSendMsgListener().sendMultiJoined(roomID);
-                    WKRTCManager.getInstance().getSendMsgListener().sendMultiJoined(roomID);
+                    // 通知其他参与者已成功加入会议
+                    if (WKRTCManager.getInstance().getSendMsgListener() != null && roomID != null) {
+                        WKRTCManager.getInstance().getSendMsgListener().sendMultiJoined(roomID);
+                    }
+                    WKLogger.i(tag, "本地流发布成功，房间ID: " + roomID);
                 }
 
                 @Override
                 public void onFailure(final OwtError error) {
-
+                    WKLogger.e(tag, "发布本地流失败: " + error.errorMessage);
+                    // 通知UI发布失败
+                    if (iMeetingListener != null) {
+                        iMeetingListener.hangup();
+                    }
                 }
-            };
-            HashMap<String, String> hashMap = new HashMap<>();
-            hashMap.put("from", loginUID);
-            localStream.setAttributes(hashMap);
-            conferenceClient.publish(localStream, options, callback);
+                };
+                
+                // 设置本地流属性
+                HashMap<String, String> hashMap = new HashMap<>();
+                hashMap.put("from", loginUID);
+                localStream.setAttributes(hashMap);
+                
+                // 发布本地流到会议
+                conferenceClient.publish(localStream, options, callback);
+                
+            } catch (Exception e) {
+                WKLogger.e(tag, "发布本地流异常", e);
+                // 发布失败时清理资源
+                cleanupLocalMedia();
+                if (iMeetingListener != null) {
+                    iMeetingListener.hangup();
+                }
+            }
         });
+    }
+
+    /**
+     * 创建优化的发布选项
+     * 优先 H264（硬件加速），备选 VP8（网络适应性）
+     */
+    private PublishOptions createOptimizedPublishOptions() {
+        return PublishOptions.builder()
+                .addVideoParameter(new VideoEncodingParameters(H264)) // 优先硬件加速
+                .addVideoParameter(new VideoEncodingParameters(VP8))  // 备选方案
+                .build();
     }
 
     public void joinRoom() {
         executor.execute(() -> conferenceClient.join(token, new ActionCallback<ConferenceInfo>() {
             @Override
             public void onSuccess(ConferenceInfo conferenceInfo) {
+                WKLogger.i(tag, "成功加入房间");
+                reconnectAttempts = 0; // 重置重连计数
                 joinRoomSuccess();
             }
 
             @Override
             public void onFailure(OwtError e) {
-                WKLogger.e(tag, "加入房间错误" + e.errorMessage);
+                WKLogger.e(tag, "加入房间失败: " + e.errorMessage + ", 重连次数: " + reconnectAttempts);
+                
+                // 网络错误且未超过重连次数，尝试重连
+                if (isNetworkError(e) && reconnectAttempts < MAX_RECONNECT_ATTEMPTS) {
+                    reconnectAttempts++;
+                    WKLogger.i(tag, "尝试重连房间，第" + reconnectAttempts + "次");
+                    
+                    // 延迟重连
+                    new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+                        joinRoom();
+                    }, 2000 * reconnectAttempts); // 逐渐增加重连间隔
+                } else {
+                    // 重连失败或非网络错误，清理资源并通知UI
+                    WKLogger.e(tag, "加入房间最终失败，停止重连");
+                    cleanupResources();
+                    if (iMeetingListener != null) {
+                        iMeetingListener.hangup();
+                    }
+                }
             }
         }));
 
     }
 
+    /**
+     * 主动挂断通话
+     * 发送挂断消息并清理资源
+     */
     public void hangUp() {
-        if (conferenceClient != null) {
-            executor.execute(() -> conferenceClient.leave());
+        WKLogger.i(tag, "主动挂断通话");
+        
+        // 先发送挂断消息
+        if (WKRTCManager.getInstance().getSendMsgListener() != null && roomID != null) {
+            WKRTCManager.getInstance().getSendMsgListener().sendMultiHangup(roomID);
         }
-        unPublish();
-        WKRTCManager.getInstance().isCalling = false;
-        WKRTCManager.getInstance().getSendMsgListener().sendMultiHangup(roomID);
+        
+        // 离开会议室
+        if (conferenceClient != null) {
+            executor.execute(() -> {
+                try {
+                    conferenceClient.leave();
+                } catch (Exception e) {
+                    WKLogger.e(tag, "离开会议室失败", e);
+                }
+            });
+        }
+        
+        // 更新通话状态
+        WKRTCManager.getInstance().setCallingState(false);
+        
+        // 清理资源
+        cleanupResources();
+        
+        // 通知UI
         if (iMeetingListener != null) {
             iMeetingListener.hangup();
         }
-        if (checkRTCStatusReportTimer != null) {
-            checkRTCStatusReportTimer.cancel();
-            checkRTCStatusReportTimer = null;
-        }
     }
 
+    /**
+     * @deprecated 使用 {@link #cleanupLocalMedia()} 替代
+     * 此方法已整合到统一的资源清理流程中
+     */
+    @Deprecated
     private void unPublish() {
-        executor.execute(() -> {
-            if (publication != null)
-                publication.stop();
-//            localStream.detach(localRenderer);
-            if (capturer != null) {
-                capturer.stopCapture();
-                capturer.dispose();
-                capturer = null;
-            }
-            if (localStream != null) {
-                localStream.dispose();
-                localStream = null;
-            }
-        });
-
+        WKLogger.w(tag, "unPublish方法已废弃，使用cleanupLocalMedia替代");
+        cleanupLocalMedia();
     }
 
     public void startCountDownTimer(String uid) {
@@ -466,6 +697,10 @@ public class MeetingDataProvider implements ConferenceClient.ConferenceClientObs
     }
 
 
+    /**
+     * 添加远程流并订阅
+     * 优化了音视频订阅参数和错误处理
+     */
     private void addRemoteStream(RemoteStream remoteStream, Participant participant) {
         String uid = "";
         HashMap<String, String> hashMap = remoteStream.getAttributes();
@@ -473,22 +708,21 @@ public class MeetingDataProvider implements ConferenceClient.ConferenceClientObs
             uid = hashMap.get("from");
         }
         String finalUid = uid;
+        
+        if (TextUtils.isEmpty(finalUid)) {
+            WKLogger.w(tag, "远程流缺少用户ID信息，跳过订阅");
+            return;
+        }
+        
         executor.execute(() -> {
-            SubscribeOptions.VideoSubscriptionConstraints videoOption =
-                    SubscribeOptions.VideoSubscriptionConstraints.builder()
-                            .build();
-
-            SubscribeOptions.AudioSubscriptionConstraints audioOption =
-                    SubscribeOptions.AudioSubscriptionConstraints.builder()
-                            .addCodec(new AudioCodecParameters(OPUS))
-                            .addCodec(new AudioCodecParameters(PCMU))
-                            .build();
-
-            SubscribeOptions options = SubscribeOptions.builder(true, true)
-                    .setAudioOption(audioOption)
-                    .setVideoOption(videoOption)
-                    .build();
-            remoteStream.addObserver(new owt.base.RemoteStream.StreamObserver() {
+            try {
+                // 创建优化的订阅选项
+                SubscribeOptions options = createOptimizedSubscribeOptions();
+                
+                WKLogger.i(tag, "开始订阅远程流，用户: " + finalUid);
+                
+                // 添加远程流观察者
+                remoteStream.addObserver(new owt.base.RemoteStream.StreamObserver() {
                 @Override
                 public void onEnded() {
 
@@ -578,10 +812,56 @@ public class MeetingDataProvider implements ConferenceClient.ConferenceClientObs
 
                 @Override
                 public void onFailure(OwtError error) {
-                    Log.e("订阅失败", error.errorMessage);
+                    WKLogger.e(tag, "订阅远程流失败: " + error.errorMessage + ", 用户: " + finalUid);
+                    // 订阅失败，从列表中移除该用户
+                    if (!TextUtils.isEmpty(finalUid)) {
+                        for (int i = 0; i < list.size(); i++) {
+                            if (list.get(i).uid.equals(finalUid)) {
+                                list.remove(i);
+                                if (iMeetingListener != null) {
+                                    iMeetingListener.removeView(finalUid);
+                                }
+                                break;
+                            }
+                        }
+                    }
                 }
             });
+            
+            } catch (Exception e) {
+                WKLogger.e(tag, "订阅远程流异常，用户: " + finalUid, e);
+                // 订阅异常时从列表中移除该用户
+                for (int i = 0; i < list.size(); i++) {
+                    if (list.get(i).uid.equals(finalUid)) {
+                        list.remove(i);
+                        if (iMeetingListener != null) {
+                            iMeetingListener.removeView(finalUid);
+                        }
+                        break;
+                    }
+                }
+            }
         });
+    }
+
+    /**
+     * 创建优化的订阅选项
+     * 音频：OPUS + PCMU，视频：自适应
+     */
+    private SubscribeOptions createOptimizedSubscribeOptions() {
+        SubscribeOptions.AudioSubscriptionConstraints audioOption =
+                SubscribeOptions.AudioSubscriptionConstraints.builder()
+                        .addCodec(new AudioCodecParameters(OPUS))  // 高质量
+                        .addCodec(new AudioCodecParameters(PCMU))  // 兼容性
+                        .build();
+
+        SubscribeOptions.VideoSubscriptionConstraints videoOption =
+                SubscribeOptions.VideoSubscriptionConstraints.builder().build();
+
+        return SubscribeOptions.builder(true, true)
+                .setAudioOption(audioOption)
+                .setVideoOption(videoOption)
+                .build();
     }
 
 

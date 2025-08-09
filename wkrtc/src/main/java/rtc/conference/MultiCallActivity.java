@@ -78,8 +78,22 @@ import rtc.view.MultiVideoChatLayout;
 
 /**
  * 5/6/21 6:22 PM
- * 多人
+ * 多人通话活动（已废弃）
+ * 
+ * @deprecated 此实现存在架构问题，请使用 {@link MeetingActivity} + {@link rtc.utils.MeetingDataProvider}
+ * 
+ * 问题说明：
+ * 1. 逻辑过于集中在Activity中，难以维护
+ * 2. 缺少状态管理和错误恢复机制
+ * 3. 资源管理不当，容易内存泄漏
+ * 4. 线程安全问题
+ * 
+ * 迁移路径：
+ * - 新功能使用 MeetingActivity
+ * - 现有引用逐步迁移到 MeetingActivity
+ * - 此类将在后续版本中移除
  */
+@Deprecated
 public class MultiCallActivity extends RTCBaseActivity implements ConferenceClient.ConferenceClientObserver {
     private final String tag = "MultiCallActivity";
     private final ExecutorService executor = Executors.newSingleThreadExecutor();

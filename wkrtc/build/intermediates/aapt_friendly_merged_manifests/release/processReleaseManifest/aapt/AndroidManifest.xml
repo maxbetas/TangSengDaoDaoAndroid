@@ -26,7 +26,12 @@
     <application
         android:allowBackup="true"
         android:supportsRtl="true" >
+
+        <!-- RTC 成员选择页面 -->
         <activity android:name="com.chat.rtc.multi.ChooseRTCMemberActivity" />
+
+        <!-- 多人通话相关 Activity -->
+        <!-- 注意：MultiCallActivity 已废弃，推荐使用 MeetingActivity -->
         <activity
             android:name="rtc.conference.MultiCallActivity"
             android:hardwareAccelerated="true"
@@ -36,6 +41,16 @@
         <activity
             android:name="rtc.conference.MultiCallWaitingAnswerActivity"
             android:launchMode="singleTask" />
+        <!-- 推荐的多人通话实现 -->
+        <activity
+            android:name="rtc.conference.MeetingActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Avchat_ActivitySlideRightIn"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- P2P 通话相关 Activity -->
         <activity
             android:name="rtc.p2p.P2PVideoCallWaitingAnswerActivity"
             android:launchMode="singleTask"
@@ -46,13 +61,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Avchat_ActivitySlideRightIn" />
-        <activity
-            android:name="rtc.conference.MeetingActivity"
-            android:hardwareAccelerated="true"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            android:theme="@style/Avchat_ActivitySlideRightIn"
-            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
