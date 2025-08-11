@@ -6,6 +6,9 @@
 
     <application>
         <activity
+            android:name="com.chat.security.ui.SecurityHomeActivity"
+            android:exported="false" />
+        <activity
             android:name="com.chat.security.ui.DestroyAccountActivity"
             android:exported="false" />
     </application>

@@ -2,8 +2,10 @@ R_DEF: Internal format may change without notice
 local
 id codeEt
 id confirmBtn
+id destroyLayout
 id sendSmsBtn
 layout act_destroy_account
+layout act_security_home
 string confirm_destroy
 string destroy_account_desc
 string destroy_account_title

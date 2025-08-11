@@ -40,7 +40,7 @@ class WKSecurityApplication private constructor() {
                 com.chat.uikit.R.mipmap.icon_setting,
                 ctx.getString(com.chat.security.R.string.security_and_privacy)
             ) {
-                val intent = Intent(ctx, DestroyAccountActivity::class.java)
+                val intent = Intent(ctx, com.chat.security.ui.SecurityHomeActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 ctx.startActivity(intent)
             }

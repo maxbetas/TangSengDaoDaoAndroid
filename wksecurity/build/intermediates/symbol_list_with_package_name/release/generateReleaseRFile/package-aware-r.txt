@@ -4835,6 +4835,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id destroyLayout
 id deviceIv
 id dialog_button
 id disjoint
@@ -5899,6 +5900,7 @@ layout act_search_all_layout
 layout act_search_msg_img_layout
 layout act_search_msg_with_date_layout
 layout act_search_user_layout
+layout act_security_home
 layout act_set_font_size_layout
 layout act_setting_layout
 layout act_system_team_layout
