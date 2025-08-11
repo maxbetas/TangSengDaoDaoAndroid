@@ -14,8 +14,9 @@ class WKSecurityApplication private constructor() {
     private var application: Application? = null
 
     companion object {
-        val instance: WKSecurityApplication by lazy { WKSecurityApplication() }
-        fun getInstance(): WKSecurityApplication = instance
+        private val HOLDER: WKSecurityApplication by lazy { WKSecurityApplication() }
+        @JvmStatic
+        fun getInstance(): WKSecurityApplication = HOLDER
     }
 
     fun init(app: Application) {

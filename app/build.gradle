@@ -92,4 +92,5 @@ dependencies {
     implementation project(path: ':wkrtc')
     implementation project(path: ':wkadvanced')
     implementation project(path: ':wkgroupmanage')
+    implementation project(path: ':wksecurity')
 }

@@ -33,6 +33,7 @@ import com.chat.groupmanage.WKGroupManageApplication
 import com.chat.login.WKLoginApplication
 import com.chat.push.WKPushApplication
 import com.chat.rtc.WKUIRTCApplication
+import com.chat.security.WKSecurityApplication
 import com.chat.scan.WKScanApplication
 import com.chat.uikit.TabActivity
 import com.chat.uikit.WKUIKitApplication
@@ -112,6 +113,8 @@ class TSApplication : MultiDexApplication() {
         WKAdvancedApplication.instance.init()
         // 引入音视频通话模块
         WKUIRTCApplication.init(list=getList())
+        // 引入安全与隐私模块
+        WKSecurityApplication.getInstance().init(this)
         addAppFrontBack()
         addListener()
     }

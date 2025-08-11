@@ -22,7 +22,7 @@ class DestroyAccountActivity : WKBaseActivity<ActDestroyAccountBinding>() {
     override fun initListener() {
         wkVBinding.sendSmsBtn.setOnClickListener {
             SecurityModel.getInstance().sendDestroySms { code, msg ->
-                if (code == HttpResponseCode.success) {
+                if (code == HttpResponseCode.success.toInt()) {
                     WKToastUtils.getInstance().showToastNormal(getString(R.string.send_sms))
                 } else {
                     WKToastUtils.getInstance().showToastNormal(msg)
@@ -48,7 +48,7 @@ class DestroyAccountActivity : WKBaseActivity<ActDestroyAccountBinding>() {
             ) { index ->
                 if (index == 1) {
                     SecurityModel.getInstance().destroyAccount(code!!) { code1, msg ->
-                        if (code1 == HttpResponseCode.success) {
+                        if (code1 == HttpResponseCode.success.toInt()) {
                             WKToastUtils.getInstance().showToastNormal(getString(R.string.destroy_account_title))
                             com.chat.uikit.WKUIKitApplication.getInstance().exitLogin(0)
                             finish()

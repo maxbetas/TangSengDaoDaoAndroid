@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+id codeEt
+id confirmBtn
+id sendSmsBtn
+layout act_destroy_account
+string confirm_destroy
+string destroy_account_desc
+string destroy_account_title
+string input_code_hint
+string security_and_privacy
+string send_sms

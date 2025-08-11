@@ -16,7 +16,7 @@ class SecurityModel private constructor() : WKBaseModel() {
     fun sendDestroySms(listener: ICommonListener) {
         request(createService(SecurityService::class.java).sendDestroySms(), object : IRequestResultListener<CommonResponse> {
             override fun onSuccess(result: CommonResponse) {
-                listener.onResult(HttpResponseCode.success, "")
+                listener.onResult(HttpResponseCode.success.toInt(), "")
             }
 
             override fun onFail(code: Int, msg: String) {
@@ -28,7 +28,7 @@ class SecurityModel private constructor() : WKBaseModel() {
     fun destroyAccount(code: String, listener: ICommonListener) {
         request(createService(SecurityService::class.java).destroy(code), object : IRequestResultListener<CommonResponse> {
             override fun onSuccess(result: CommonResponse) {
-                listener.onResult(HttpResponseCode.success, "")
+                listener.onResult(HttpResponseCode.success.toInt(), "")
             }
 
             override fun onFail(code: Int, msg: String) {
