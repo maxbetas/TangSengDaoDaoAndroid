@@ -8,7 +8,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.chat.security.R;
@@ -24,17 +23,13 @@ public final class ItemSecurityMenuLayoutBinding implements ViewBinding {
   public final TextView descTv;
 
   @NonNull
-  public final AppCompatImageView imageView;
-
-  @NonNull
-  public final TextView nameTv;
+  public final TextView titleTv;
 
   private ItemSecurityMenuLayoutBinding(@NonNull LinearLayout rootView, @NonNull TextView descTv,
-      @NonNull AppCompatImageView imageView, @NonNull TextView nameTv) {
+      @NonNull TextView titleTv) {
     this.rootView = rootView;
     this.descTv = descTv;
-    this.imageView = imageView;
-    this.nameTv = nameTv;
+    this.titleTv = titleTv;
   }
 
   @Override
@@ -70,19 +65,13 @@ public final class ItemSecurityMenuLayoutBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.imageView;
-      AppCompatImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
+      id = R.id.titleTv;
+      TextView titleTv = ViewBindings.findChildViewById(rootView, id);
+      if (titleTv == null) {
         break missingId;
       }
 
-      id = R.id.nameTv;
-      TextView nameTv = ViewBindings.findChildViewById(rootView, id);
-      if (nameTv == null) {
-        break missingId;
-      }
-
-      return new ItemSecurityMenuLayoutBinding((LinearLayout) rootView, descTv, imageView, nameTv);
+      return new ItemSecurityMenuLayoutBinding((LinearLayout) rootView, descTv, titleTv);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

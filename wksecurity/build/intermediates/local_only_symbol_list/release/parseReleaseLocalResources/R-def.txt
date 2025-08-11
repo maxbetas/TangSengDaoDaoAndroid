@@ -4,10 +4,9 @@ drawable ic_privacy_shield
 id codeEt
 id confirmBtn
 id descTv
-id imageView
-id nameTv
 id recyclerView
 id sendSmsBtn
+id titleTv
 layout act_destroy_account
 layout act_security_home
 layout item_security_menu_layout

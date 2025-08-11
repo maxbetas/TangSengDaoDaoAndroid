@@ -3,27 +3,15 @@
     style="@style/layoutBg"
     android:orientation="horizontal">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="15dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_privacy_shield" />
-
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginStart="15dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/nameTv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
+            android:id="@+id/titleTv"
+            style="@style/leftTextView"
             android:textColor="@color/colorDark"
             android:textSize="@dimen/font_size_16" />
 
@@ -34,13 +22,11 @@
             android:layout_marginTop="3dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:text=""
             android:textColor="@color/color999"
-            android:textSize="@dimen/font_size_14" />
+            android:textSize="12sp" />
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        style="@style/arrow_right_iv" />
+    <androidx.appcompat.widget.AppCompatImageView style="@style/arrow_right_iv" />
 </LinearLayout>
 
 
