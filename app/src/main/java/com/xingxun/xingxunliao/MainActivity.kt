@@ -83,7 +83,9 @@ class MainActivity : WKBaseActivity<ActivityMainBinding>() {
                 NormalClickableContent(NormalClickableContent.NormalClickableTypes.Other, ""),
                 object : NormalClickableSpan.IClick {
                     override fun onClick(view: View) {
-                        WKApiConfig.baseWebUrl + "privacy_policy.html"
+                        showWebView(
+                            WKApiConfig.baseWebUrl + "privacy_policy.html"
+                        )
                     }
                 }), privacyPolicyIndex, privacyPolicyIndex + 6, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         )
