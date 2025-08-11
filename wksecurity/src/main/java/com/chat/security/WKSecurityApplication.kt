@@ -37,7 +37,7 @@ class WKSecurityApplication private constructor() {
             val ctx = application ?: return@setMethod null
             PersonalInfoMenu(
                 "security",
-                com.chat.uikit.R.mipmap.icon_setting,
+                com.chat.security.R.drawable.ic_privacy_shield,
                 ctx.getString(com.chat.security.R.string.security_and_privacy)
             ) {
                 val intent = Intent(ctx, com.chat.security.ui.SecurityHomeActivity::class.java)

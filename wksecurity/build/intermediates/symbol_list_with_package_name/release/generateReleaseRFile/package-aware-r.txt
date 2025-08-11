@@ -4163,6 +4163,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_privacy_shield
 drawable ic_reply_black_24dp
 drawable ic_rotate_left_24
 drawable ic_rotate_right_24
@@ -4835,7 +4836,6 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
-id destroyLayout
 id deviceIv
 id dialog_button
 id disjoint
@@ -6034,6 +6034,7 @@ layout item_search_msg_with_date_layout
 layout item_search_msg_with_date_title_layout
 layout item_search_user_layout
 layout item_search_with_member_layout
+layout item_security_menu_layout
 layout item_select_text_pop
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

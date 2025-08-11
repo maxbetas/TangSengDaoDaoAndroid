@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.chat.security.R;
@@ -19,12 +20,12 @@ public final class ActSecurityHomeBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final LinearLayout destroyLayout;
+  public final RecyclerView recyclerView;
 
   private ActSecurityHomeBinding(@NonNull LinearLayout rootView,
-      @NonNull LinearLayout destroyLayout) {
+      @NonNull RecyclerView recyclerView) {
     this.rootView = rootView;
-    this.destroyLayout = destroyLayout;
+    this.recyclerView = recyclerView;
   }
 
   @Override
@@ -54,13 +55,13 @@ public final class ActSecurityHomeBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.destroyLayout;
-      LinearLayout destroyLayout = ViewBindings.findChildViewById(rootView, id);
-      if (destroyLayout == null) {
+      id = R.id.recyclerView;
+      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerView == null) {
         break missingId;
       }
 
-      return new ActSecurityHomeBinding((LinearLayout) rootView, destroyLayout);
+      return new ActSecurityHomeBinding((LinearLayout) rootView, recyclerView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

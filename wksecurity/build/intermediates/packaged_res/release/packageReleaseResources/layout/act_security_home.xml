@@ -2,42 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/homeColor">
+    android:background="@color/homeColor"
+    android:orientation="vertical">
 
     <include layout="@layout/wk_title_bar_layout" />
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <LinearLayout
-            android:id="@+id/destroyLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/white"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/destroy_account_title"
-                android:textColor="@color/colorDark"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/destroy_account_desc"
-                android:textColor="@color/color999"
-                android:layout_marginTop="6dp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
+        android:layout_height="match_parent"
+        android:background="@color/homeColor" />
 </LinearLayout>
 
 

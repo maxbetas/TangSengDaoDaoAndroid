@@ -4162,6 +4162,7 @@ int drawable ic_mtrl_checked_circle 0x0
 int drawable ic_mtrl_chip_checked_black 0x0
 int drawable ic_mtrl_chip_checked_circle 0x0
 int drawable ic_mtrl_chip_close_circle 0x0
+int drawable ic_privacy_shield 0x0
 int drawable ic_reply_black_24dp 0x0
 int drawable ic_rotate_left_24 0x0
 int drawable ic_rotate_right_24 0x0
@@ -4834,7 +4835,6 @@ int id design_menu_item_action_area 0x0
 int id design_menu_item_action_area_stub 0x0
 int id design_menu_item_text 0x0
 int id design_navigation_view 0x0
-int id destroyLayout 0x0
 int id deviceIv 0x0
 int id dialog_button 0x0
 int id disjoint 0x0
@@ -6033,6 +6033,7 @@ int layout item_search_msg_with_date_layout 0x0
 int layout item_search_msg_with_date_title_layout 0x0
 int layout item_search_user_layout 0x0
 int layout item_search_with_member_layout 0x0
+int layout item_security_menu_layout 0x0
 int layout item_select_text_pop 0x0
 int layout m3_alert_dialog 0x0
 int layout m3_alert_dialog_actions 0x0
