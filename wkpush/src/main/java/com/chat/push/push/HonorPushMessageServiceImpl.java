@@ -18,7 +18,7 @@ public class HonorPushMessageServiceImpl extends HonorPushMessageService {
         super.onNewToken(token);
         if (!TextUtils.isEmpty(token)) {
             Log.e("荣耀推送新Token", token);
-            PushModel.getInstance().registerDeviceToken(token, WKPushApplication.getInstance().pushBundleID, "");
+            PushModel.getInstance().registerDeviceToken(token, WKPushApplication.getInstance().pushBundleID, "HONOR");
         }
     }
     
