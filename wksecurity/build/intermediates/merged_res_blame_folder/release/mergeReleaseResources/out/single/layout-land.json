@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/layout-land/material_clock_period_toggle_land.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout-land/material_clock_period_toggle_land.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/layout-land/material_timepicker.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout-land/material_timepicker.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/layout-land/mtrl_picker_header_dialog.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout-land/mtrl_picker_header_dialog.xml"
+    }
+]

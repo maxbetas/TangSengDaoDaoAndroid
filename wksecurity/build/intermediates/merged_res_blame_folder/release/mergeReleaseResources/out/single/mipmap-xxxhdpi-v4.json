@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/icon_chat_toolbar_aite.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/icon_chat_toolbar_aite.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ic_chat_n.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ic_chat_n.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/icon_chat_toolbar_emoji.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/icon_chat_toolbar_emoji.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ic_contacts_n.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ic_contacts_n.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ar_record_audio_normal.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ar_record_audio_normal.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ic_mine_s.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ic_mine_s.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ic_chat_s.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ic_chat_s.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/icon_chat_toolbar_more.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/icon_chat_toolbar_more.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ic_mine_n.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ic_mine_n.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ic_contacts_s.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ic_contacts_s.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/ar_record_audio_select.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/ar_record_audio_select.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/icon_chat_toolbar_voice.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/icon_chat_toolbar_voice.png"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/mipmap-xxxhdpi-v4/icon_chat_toolbar_album.png",
+        "source": "com.chat.security.wksecurity-release-70:/mipmap-xxxhdpi-v4/icon_chat_toolbar_album.png"
+    }
+]

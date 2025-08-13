@@ -1,0 +1,14 @@
+<dependencies>
+  <compile
+      roots="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar:unspecified@jar">
+    <dependency
+        name="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar:unspecified@jar"
+        simpleName="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar"/>
+  </compile>
+  <package
+      roots="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar:unspecified@jar">
+    <dependency
+        name="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar:unspecified@jar"
+        simpleName="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar"/>
+  </package>
+</dependencies>

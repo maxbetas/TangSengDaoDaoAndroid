@@ -1,0 +1,15 @@
+<libraries>
+  <library
+      name="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar:unspecified@jar"
+      jars="/Users/echo/.gradle/caches/8.10.2/transforms/a34392043f3299ee098c46358f9b2957/transformed/jetified-push-8.0.12.307/jars/classes.jar"
+      resolved="__local_aars__:/Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/push-8.0.12.307.aar:unspecified"
+      folder="/Users/echo/.gradle/caches/8.10.2/transforms/a34392043f3299ee098c46358f9b2957/transformed/jetified-push-8.0.12.307"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+</libraries>

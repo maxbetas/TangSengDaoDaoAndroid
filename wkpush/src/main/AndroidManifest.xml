@@ -154,7 +154,7 @@
             android:permission="com.heytap.mcs.permission.SEND_PUSH_MESSAGE">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </int-filter>
+            </intent-filter>
         </service>
     </application>
     <queries>

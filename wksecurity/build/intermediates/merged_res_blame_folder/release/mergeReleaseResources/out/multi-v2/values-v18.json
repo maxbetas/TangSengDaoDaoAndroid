@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.chat.security.wksecurity-release-67:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/7fb73c608993a57a53edd6888a24afff/transformed/appcompat-1.7.0/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.chat.security.wksecurity-mergeReleaseResources-65:/values-v18/values-v18.xml",
+            "map": [
+                {
+                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/7fb73c608993a57a53edd6888a24afff/transformed/appcompat-1.7.0/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        }
+    ]
+}

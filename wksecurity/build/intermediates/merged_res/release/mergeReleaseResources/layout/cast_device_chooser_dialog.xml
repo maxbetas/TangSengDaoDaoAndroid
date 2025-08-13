@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             android:orientation="vertical"
+             android:paddingBottom="24dp"
+             android:paddingLeft="24dp"
+             android:paddingRight="24dp"
+             android:paddingTop="24dp">
+    <TextView android:id="@+id/cast_device_chooser_title"
+              android:ellipsize="end"
+              android:gravity="center_vertical"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="16dp"
+              android:layout_width="fill_parent"
+              android:minHeight="52dp"
+              android:singleLine="true"
+              android:text="@string/cast_device_chooser_title"
+              android:textAppearance="@style/TextAppearance.CastMediaRouteChooserDialog.Title" />
+    <ListView android:id="@+id/cast_device_chooser_list"
+              android:divider="@android:color/transparent"
+              android:dividerHeight="0dp"
+              android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:paddingBottom="24dp" />
+    <LinearLayout android:id="@android:id/empty"
+              android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:orientation="vertical"
+              android:visibility="gone">
+        <LinearLayout android:id="@+id/cast_device_chooser_searching"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:minHeight="150dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+            <TextView android:id="@+id/cast_device_chooser_search_status"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingTop="40dp"
+                    android:text="@string/cast_device_chooser_searching_for_devices"
+                    android:textAppearance="@style/TextAppearance.CastMediaRouteChooserDialog.SecondaryText" />
+            <ProgressBar android:id="@+id/cast_device_chooser_progress_bar"
+                        android:indeterminate="true"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="150dp"
+                        style="?android:attr/progressBarStyleHorizontal" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cast_device_chooser_zero_devices"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:orientation="vertical"
+                  android:visibility="gone">
+            <TextView android:id="@+id/cast_device_chooser_zero_devices_status"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/cast_zero_devices_found"
+                    android:textAppearance="@style/TextAppearance.CastMediaRouteChooserDialog.SecondaryText" />
+            <TextView android:id="@+id/cast_device_chooser_learn_more"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="24dp"
+                    android:text="@string/cast_zero_devices_learn_more_description"
+                    android:textAppearance="@style/TextAppearance.CastMediaRouteChooserDialog.SecondaryText" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/cast_device_chooser_wifi_warning"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:orientation="vertical"
+                  android:visibility="gone">
+            <TextView android:id="@+id/cast_device_chooser_wifi_warning_description"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="24dp"
+                    android:text="@string/cast_wifi_warning_description"
+                    android:textAppearance="@style/TextAppearance.CastMediaRouteChooserDialog.SecondaryText" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+            <!-- Ignore RtlHardCoded. Both layout_alignParentEnd and layout_alignParentRight are needed since the minSdkVersion is less than 17. -->
+            <Button
+                android:id="@+id/done_button"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:minWidth="0dp"
+                android:text="@string/cast_zero_devices_found_done_button_label"
+                style="?android:attr/borderlessButtonStyle"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

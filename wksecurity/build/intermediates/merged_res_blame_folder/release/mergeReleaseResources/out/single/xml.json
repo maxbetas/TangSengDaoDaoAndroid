@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/xml/library_file_paths.xml",
+        "source": "com.chat.security.wksecurity-jetified-android-image-cropper-4.6.0-60:/xml/library_file_paths.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/xml/ps_file_paths.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/xml/ps_file_paths.xml"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "com.chat.rtc.wkrtc-release-66:/drawable-night-v8/radian_normal_layout.xml",
+        "source": "com.chat.rtc.wkrtc-release-62:/drawable-night-v8/radian_normal_layout.xml"
+    },
+    {
+        "merged": "com.chat.rtc.wkrtc-release-66:/drawable-night-v8/white_bg_selected.xml",
+        "source": "com.chat.rtc.wkrtc-release-62:/drawable-night-v8/white_bg_selected.xml"
+    },
+    {
+        "merged": "com.chat.rtc.wkrtc-release-66:/drawable-night-v8/chat_edit_bg.xml",
+        "source": "com.chat.rtc.wkrtc-release-62:/drawable-night-v8/chat_edit_bg.xml"
+    },
+    {
+        "merged": "com.chat.rtc.wkrtc-release-66:/drawable-night-v8/online_bg.xml",
+        "source": "com.chat.rtc.wkrtc-release-62:/drawable-night-v8/online_bg.xml"
+    },
+    {
+        "merged": "com.chat.rtc.wkrtc-release-66:/drawable-night-v8/white_bg.xml",
+        "source": "com.chat.rtc.wkrtc-release-62:/drawable-night-v8/white_bg.xml"
+    }
+]

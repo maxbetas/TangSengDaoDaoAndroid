@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml:2:13-83
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml:2:13-83
+	package
+		INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml
+	xmlns:android
+		ADDED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml:2:23-81
+uses-sdk
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml reason: use-sdk injection requested
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml
+INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml
+	android:targetSdkVersion
+		INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml
+	android:minSdkVersion
+		INJECTED from /Users/echo/Documents/TangSengDaoDaoAndroid/MyLibs/honorpush/build/intermediates/tmp/ProcessLibraryManifest/release/tempAndroidManifest11645023903486850849.xml

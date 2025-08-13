@@ -1,0 +1,262 @@
+[
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/mtrl_card_lowers_interpolator.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/mtrl_card_lowers_interpolator.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_checkbox_to_unchecked_icon_null_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_checkbox_to_unchecked_icon_null_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_enter.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_enter.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/m3_motion_fade_enter.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/m3_motion_fade_enter.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/fade_in.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/fade_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_fade_in.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/linear_indeterminate_line2_head_interpolator.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/linear_indeterminate_line2_head_interpolator.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_alpha_enter.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_alpha_enter.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/anim_add_child.xml",
+        "source": "com.chat.security.wksecurity-release-70:/anim/anim_add_child.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_album_show.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_album_show.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_modal_in.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_modal_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/anim_zoom_in.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/anim_zoom_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/fade_out.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/fade_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_slide_in_top.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_overshoot_interpolator.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_overshoot_interpolator.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_exit.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_exit.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_alpha_exit.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_alpha_exit.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_checkbox_to_checked_box_outer_merged_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/linear_indeterminate_line2_tail_interpolator.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/linear_indeterminate_line2_tail_interpolator.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_fade_out.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/design_snackbar_in.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_slide_out_bottom.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/popup_context_in.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/popup_context_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_radio_to_off_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_radio_to_on_mtrl_ring_outer_path_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/bottom_in.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/bottom_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/slide_out_bottom.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/slide_out_bottom.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_fade_in.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_fade_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/linear_indeterminate_line1_head_interpolator.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/linear_indeterminate_line1_head_interpolator.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/dialog_enter_anim.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/dialog_enter_anim.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_album_dismiss.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_album_dismiss.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_checkbox_to_checked_icon_null_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_checkbox_to_checked_icon_null_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_radio_to_off_mtrl_dot_group_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_radio_to_off_mtrl_dot_group_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ts_out_anim.xml",
+        "source": "com.chat.security.wksecurity-release-70:/anim/ts_out_anim.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/no_animation.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/no_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/design_snackbar_out.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_anticipate_interpolator.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_anticipate_interpolator.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/linear_indeterminate_line1_tail_interpolator.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/linear_indeterminate_line1_tail_interpolator.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_checkbox_to_checked_box_inner_merged_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/popup_out.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/popup_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/m3_motion_fade_exit.xml",
+        "source": "com.chat.security.wksecurity-material-1.12.0-12:/anim/m3_motion_fade_exit.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/bottom_out.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/bottom_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_up_in.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_up_in.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_slide_out_top.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_down_out.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_down_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_slide_in_bottom.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_checkbox_to_unchecked_check_path_merged_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_tooltip_enter.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_layout_fall_enter.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_layout_fall_enter.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_tooltip_exit.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_tooltip_exit.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ts_in_anim.xml",
+        "source": "com.chat.security.wksecurity-release-70:/anim/ts_in_anim.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_popup_exit.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_radio_to_on_mtrl_dot_group_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_radio_to_on_mtrl_dot_group_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/btn_radio_to_on_mtrl_ring_outer_animation.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_modal_out.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_modal_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_fade_out.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_fade_out.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/ps_anim_fall_enter.xml",
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/anim/ps_anim_fall_enter.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/bottom_silent.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/bottom_silent.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/slide_in_top.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/slide_in_top.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/abc_popup_enter.xml",
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "com.chat.security.wksecurity-release-67:/anim/popup_in.xml",
+        "source": "com.chat.security.wksecurity-release-63:/anim/popup_in.xml"
+    }
+]

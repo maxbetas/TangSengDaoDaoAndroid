@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.chat.rtc.wkrtc-release-66:/xml/ps_file_paths.xml",
+        "source": "com.chat.rtc.wkrtc-jetified-pictureselector-v3.11.2-34:/xml/ps_file_paths.xml"
+    },
+    {
+        "merged": "com.chat.rtc.wkrtc-release-66:/xml/library_file_paths.xml",
+        "source": "com.chat.rtc.wkrtc-jetified-android-image-cropper-4.6.0-60:/xml/library_file_paths.xml"
+    }
+]
