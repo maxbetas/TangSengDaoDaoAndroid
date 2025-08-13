@@ -159,6 +159,25 @@ public class WKPushApplication {
             e.printStackTrace();
         }
     }
+    
+    private void initHonor() {
+        try {
+            // 荣耀推送初始化
+            // 根据官方文档：https://developer.honor.com/cn/kitdoc?category=base&kitId=11002&navigation=guides&docId=sdk-overview.md
+            // 荣耀推送SDK会自动初始化，不需要手动调用init方法
+            // 只需要确保在AndroidManifest.xml中正确配置了meta-data
+            Log.e("荣耀推送", "荣耀推送SDK已自动初始化");
+            
+            // 如果需要手动获取Token，可以调用：
+            // String token = HonorPushClient.getInstance(mContext.get()).getToken();
+            // if (!TextUtils.isEmpty(token)) {
+            //     Log.e("获取honorpush", token);
+            //     PushModel.getInstance().registerDeviceToken(token, pushBundleID, "HONOR");
+            // }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     private void addListener() {
         EndpointManager.getInstance().setMethod("show_open_notification_dialog", object -> {
@@ -215,6 +234,8 @@ public class WKPushApplication {
                     initOPPO();
                 } else if (OsUtils.isVivo()) {
                     initVIVO();
+                } else if (OsUtils.isHonor()) {
+                    initHonor();
                 }
             }
         }

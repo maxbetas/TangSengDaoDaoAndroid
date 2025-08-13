@@ -3,6 +3,11 @@
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <!-- 荣耀推送权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:supportsRtl="true">
@@ -109,6 +114,17 @@
             android:name="com.vivo.push.app_id"
             android:value="105660344" />
 
+        <!--honor-->
+        <meta-data
+            android:name="com.hihonor.push.app_id"
+            android:value="104515950" />
+        <meta-data
+            android:name="com.hihonor.push.app_key"
+            android:value="4180701d4eaa4cfb9afbfa9e2e57cb45" />
+        <meta-data
+            android:name="com.hihonor.push.app_secret"
+            android:value="f9fc89acb675232704f0079d7d11f2dff162ea2cc0b082890eeab9f7e93c2d71" />
+
         <!--push应用定义消息receiver声明-->
         <receiver
             android:name="com.chat.push.push.VivoPushMessageReceiverImpl"
@@ -122,6 +138,15 @@
             android:name="com.vivo.push.sdk.service.CommandClientService"
             android:exported="true"
             android:permission="com.push.permission.UPSTAGESERVICE" />
+        <!--honor-->
+        <service
+            android:name="com.chat.push.push.HonorPushMessageServiceImpl"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hihonor.push.action.RECEIVE_MESSAGE" />
+            </intent-filter>
+        </service>
+
         <!--Firebase-->
         <service
             android:name="com.chat.push.push.WKFirebaseMessagingService"
@@ -129,7 +154,7 @@
             android:permission="com.heytap.mcs.permission.SEND_PUSH_MESSAGE">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-            </intent-filter>
+            </int-filter>
         </service>
     </application>
     <queries>

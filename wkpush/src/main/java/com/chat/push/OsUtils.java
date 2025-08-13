@@ -30,12 +30,14 @@ public class OsUtils {
     private static final String ROM_SMARTISAN = "SMARTISAN";
     private static final String ROM_VIVO = "VIVO";
     private static final String ROM_QIKU = "QIKU";
+    private static final String ROM_HONOR = "HONOR";
 
     private static final String KEY_VERSION_MIUI = "ro.miui.ui.version.name";
     private static final String KEY_VERSION_EMUI = "ro.build.version.emui";
     private static final String KEY_VERSION_OPPO = "ro.build.version.opporom";
     private static final String KEY_VERSION_SMARTISAN = "ro.smartisan.version";
     private static final String KEY_VERSION_VIVO = "ro.vivo.os.version";
+    private static final String KEY_VERSION_HONOR = "ro.build.version.honor";
 
     private static String sName;
     private static String sVersion;
@@ -54,6 +56,10 @@ public class OsUtils {
 
     public static boolean isOppo() {
         return check(ROM_OPPO);
+    }
+
+    public static boolean isHonor() {
+        return check(ROM_HONOR);
     }
 
     public static boolean isFlyme() {
@@ -97,6 +103,8 @@ public class OsUtils {
             sName = ROM_VIVO;
         } else if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_SMARTISAN))) {
             sName = ROM_SMARTISAN;
+        } else if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_HONOR))) {
+            sName = ROM_HONOR;
         } else {
             sVersion = Build.DISPLAY;
             if (sVersion.toUpperCase().contains(ROM_FLYME)) {

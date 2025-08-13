@@ -49,6 +49,8 @@ public class PushModel extends WKBaseModel {
                 device_type = "OPPO";
             } else if (OsUtils.isVivo()) {
                 device_type = "VIVO";
+            } else if (OsUtils.isHonor()) {
+                device_type = "HONOR";
             }
         }
 
