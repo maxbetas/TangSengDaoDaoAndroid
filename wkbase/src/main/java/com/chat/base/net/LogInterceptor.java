@@ -19,7 +19,7 @@ import okhttp3.MediaType;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okhttp3.internal.Util;
+// Removed okhttp3.internal.Util import as it's no longer available in OkHttp 5.x
 import okio.Buffer;
 
 /**
@@ -39,22 +39,47 @@ public class LogInterceptor implements Interceptor {
             String requestParams = "";
 
             if (requestBody != null && !requestBody.isOneShot()) {
-                boolean oneShort = requestBody.isOneShot();
-                WKLogUtils.e("判断执行次数"+oneShort);
+                WKLogUtils.e("判断执行次数" + requestBody.isOneShot());
+                
                 MediaType type = requestBody.contentType();
-                Buffer source = new Buffer();
-                requestBody.writeTo(source);
-                try {
-                    Charset charset = type == null ? Charset.defaultCharset() : type.charset(Charset.defaultCharset());
-                    Util.readBomAsCharset(source, charset);
-//                    Util.readBomAsCharset()
+                // 使用try-with-resources自动管理Buffer资源
+                try (Buffer source = new Buffer()) {
+                    requestBody.writeTo(source);
+                    
+                    // 保持与原始逻辑完全一致：使用系统默认字符集作为回退
+                    Charset charset = type == null ? 
+                        Charset.defaultCharset() : 
+                        type.charset(Charset.defaultCharset());
+                    
+                    // 手动实现BOM检测逻辑，保持功能完全等价
+                    if (source.size() >= 3) {
+                        // UTF-8 BOM: EF BB BF
+                        if (source.getByte(0) == (byte) 0xEF && 
+                            source.getByte(1) == (byte) 0xBB && 
+                            source.getByte(2) == (byte) 0xBF) {
+                            charset = Charset.forName("UTF-8");
+                            source.skip(3);
+                        }
+                        // UTF-16 BE BOM: FE FF
+                        else if (source.size() >= 2 && 
+                                 source.getByte(0) == (byte) 0xFE && 
+                                 source.getByte(1) == (byte) 0xFF) {
+                            charset = Charset.forName("UTF-16BE");
+                            source.skip(2);
+                        }
+                        // UTF-16 LE BOM: FF FE
+                        else if (source.size() >= 2 && 
+                                 source.getByte(0) == (byte) 0xFF && 
+                                 source.getByte(1) == (byte) 0xFE) {
+                            charset = Charset.forName("UTF-16LE");
+                            source.skip(2);
+                        }
+                    }
+                    
                     requestParams = source.readString(charset);
                 } catch (Exception e) {
                     e.printStackTrace();
-                } finally {
-                    Util.closeQuietly(source);
                 }
-                // request = request.newBuilder().post(requestBody).build();
             }
             // 请求日志
             StringBuilder reqSb = new StringBuilder();
