@@ -8,6 +8,7 @@ import retrofit2.Converter
 class FastJsonRequestBodyConverter<T> : Converter<T, RequestBody> {
     private val MEDIA_TYPE = "application/json; charset=UTF-8".toMediaType()
 
+    @Suppress("DEPRECATION")
     override fun convert(value: T): RequestBody {
         val jsonStr = JSON.toJSONString(value)
         return jsonStr.toRequestBody(contentType = MEDIA_TYPE)
