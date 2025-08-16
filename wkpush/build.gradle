@@ -2,7 +2,7 @@ plugins {
     id 'com.android.library'
     id 'kotlin-parcelize'
     id 'kotlin-android'
-    id 'com.google.gms.google-services'
+    // 移除 google-services 插件，library模块不需要此插件
 }
 android {
     compileSdk rootProject.ext.compileSdkVersion
