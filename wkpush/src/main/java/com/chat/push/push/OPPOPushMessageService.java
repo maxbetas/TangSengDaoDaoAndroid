@@ -18,13 +18,10 @@ public class OPPOPushMessageService extends CompatibleDataMessageCallbackService
     @Override
     public void processMessage(Context context, DataMessage message) {
         super.processMessage(context.getApplicationContext(), message);
-        String content = message.getContent();
         Log.e("收到OPPO推送消息", message.toString());
         
-        // 统一处理推送消息
-        String title = message.getTitle();
-        if (!TextUtils.isEmpty(content)) {
-            PushMessageHandler.getInstance().handlePushMessage("OPPO推送", title, content);
+        if (!TextUtils.isEmpty(message.getContent())) {
+            PushMessageHandler.getInstance().handlePushMessage("OPPO推送", message.getTitle(), message.getContent());
         }
     }
 }

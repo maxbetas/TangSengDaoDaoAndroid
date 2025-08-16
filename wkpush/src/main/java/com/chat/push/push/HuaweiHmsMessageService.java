@@ -4,8 +4,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.chat.base.WKBaseApplication;
-import com.chat.base.utils.WKDeviceUtils;
 import com.chat.push.WKPushApplication;
 import com.chat.push.service.PushModel;
 import com.chat.push.service.PushMessageHandler;
@@ -28,9 +26,8 @@ public class HuaweiHmsMessageService extends HmsMessageService {
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
-        Log.e("收到华为推送消息",remoteMessage.getData());
+        Log.e("收到华为推送消息", remoteMessage.getData());
         
-        // 统一处理推送消息
         String title = null;
         String content = null;
         

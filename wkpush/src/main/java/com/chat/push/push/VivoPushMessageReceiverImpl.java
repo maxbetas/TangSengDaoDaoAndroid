@@ -1,10 +1,9 @@
 package com.chat.push.push;
 
 import android.content.Context;
-import android.util.Log;
 import android.text.TextUtils;
+import android.util.Log;
 
-import com.chat.base.utils.WKDeviceUtils;
 import com.chat.push.WKPushApplication;
 import com.chat.push.service.PushModel;
 import com.chat.push.service.PushMessageHandler;
@@ -23,24 +22,15 @@ public class VivoPushMessageReceiverImpl extends OpenClientPushMessageReceiver {
     @Override
     public void onNotificationMessageArrived(Context context, UPSNotificationMessage msg) {
         super.onNotificationMessageArrived(context, msg);
-        if (msg != null) {
+        if (msg != null && !TextUtils.isEmpty(msg.getContent())) {
             Log.e("收到Vivo推送消息", msg.getContent());
-            
-            // 统一处理推送消息
-            String title = msg.getTitle();
-            String content = msg.getContent();
-            if (!TextUtils.isEmpty(content)) {
-                PushMessageHandler.getInstance().handlePushMessage("Vivo推送", title, content);
-            }
+            PushMessageHandler.getInstance().handlePushMessage("Vivo推送", msg.getTitle(), msg.getContent());
         }
     }
 
     @Override
     public void onNotificationMessageClicked(Context context, UPSNotificationMessage msg) {
         super.onNotificationMessageClicked(context, msg);
-        if (msg != null) {
-            Log.e("点击Vivo推送消息", msg.getContent());
-            // 点击事件处理，通知已在onNotificationMessageArrived中显示
-        }
+        // 点击处理由系统PendingIntent自动完成
     }
 }

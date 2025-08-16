@@ -21,11 +21,8 @@ public class OPPOAppPushMessageService extends DataMessageCallbackService {
         super.processMessage(context, message);
         Log.e("收到OPPO App推送消息", message.toString());
         
-        // 统一处理推送消息
-        String title = message.getTitle();
-        String content = message.getContent();
-        if (!TextUtils.isEmpty(content)) {
-            PushMessageHandler.getInstance().handlePushMessage("OPPO App推送", title, content);
+        if (!TextUtils.isEmpty(message.getContent())) {
+            PushMessageHandler.getInstance().handlePushMessage("OPPO App推送", message.getTitle(), message.getContent());
         }
     }
 

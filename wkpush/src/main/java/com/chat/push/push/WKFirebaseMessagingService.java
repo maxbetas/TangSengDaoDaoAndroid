@@ -23,13 +23,11 @@ public class WKFirebaseMessagingService extends FirebaseMessagingService {
         }
     }
 
-    //监控推送的消息
     @Override
     public void onMessageReceived(@NonNull RemoteMessage msg) {
         super.onMessageReceived(msg);
         Log.e("收到Firebase推送消息", msg.getFrom());
         
-        // 统一处理推送消息
         String title = null;
         String content = null;
         
