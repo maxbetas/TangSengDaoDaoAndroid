@@ -27,6 +27,6 @@
       applicationId="com.chat.security"
       generatedSourceFolders="build/generated/ap_generated_sources/release/out:build/generated/data_binding_base_class_source_out/release/out"
       generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/Users/echo/.gradle/caches/8.10.2/transforms/7d8bc65c478139d8c6a096cbcca91412/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/Users/echo/.gradle/caches/8.11.1/transforms/e817fbcd29733c5a29ed12f4c671d3bc/transformed/D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>

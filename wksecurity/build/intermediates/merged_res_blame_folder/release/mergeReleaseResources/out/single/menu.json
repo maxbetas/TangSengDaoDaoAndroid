@@ -5,6 +5,6 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/menu/crop_image_menu.xml",
-        "source": "com.chat.security.wksecurity-jetified-android-image-cropper-4.6.0-60:/menu/crop_image_menu.xml"
+        "source": "com.chat.security.wksecurity-jetified-android-image-cropper-4.6.0-44:/menu/crop_image_menu.xml"
     }
 ]

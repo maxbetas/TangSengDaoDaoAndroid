@@ -1,42 +1,42 @@
 [
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_1.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/interpolator/btn_radio_to_off_mtrl_animation_interpolator_0.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/mtrl_linear.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/interpolator/mtrl_linear.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/interpolator/mtrl_linear.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/mr_fast_out_slow_in.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/interpolator/mr_fast_out_slow_in.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/interpolator/mr_fast_out_slow_in.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/mr_linear_out_slow_in.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/interpolator/mr_linear_out_slow_in.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/interpolator/mr_linear_out_slow_in.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/interpolator/btn_checkbox_unchecked_mtrl_animation_interpolator_0.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_1.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/fast_out_slow_in.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/interpolator/fast_out_slow_in.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/interpolator/fast_out_slow_in.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/interpolator/btn_checkbox_checked_mtrl_animation_interpolator_0.xml"
     }
 ]

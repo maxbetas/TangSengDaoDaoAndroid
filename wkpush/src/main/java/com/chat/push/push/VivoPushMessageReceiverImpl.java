@@ -19,14 +19,8 @@ public class VivoPushMessageReceiverImpl extends OpenClientPushMessageReceiver {
         PushModel.getInstance().registerDeviceToken(regId, WKPushApplication.getInstance().pushBundleID,"");
     }
 
-    @Override
-    public void onNotificationMessageArrived(Context context, UPSNotificationMessage msg) {
-        super.onNotificationMessageArrived(context, msg);
-        if (msg != null && !TextUtils.isEmpty(msg.getContent())) {
-            Log.e("收到Vivo推送消息", msg.getContent());
-            PushMessageHandler.getInstance().handlePushMessage("Vivo推送", msg.getTitle(), msg.getContent());
-        }
-    }
+    // 注意：onNotificationMessageArrived在新版SDK中为final方法，无法覆盖
+    // Vivo推送的通知消息会由系统自动处理显示
 
     @Override
     public void onNotificationMessageClicked(Context context, UPSNotificationMessage msg) {

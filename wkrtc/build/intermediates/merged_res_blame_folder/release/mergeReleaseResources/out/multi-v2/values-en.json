@@ -4,7 +4,7 @@
             "outputFile": "com.chat.rtc.wkrtc-release-66:/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/1204ed2527a3a70e025b5ae8635ce475/transformed/jetified-BaseRecyclerViewAdapterHelper-3.0.14/res/values-en/values-en.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/5f1bdcf894bf887ee58daf834608eeeb/transformed/jetified-BaseRecyclerViewAdapterHelper-3.0.14/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -60,7 +60,7 @@
             "outputFile": "com.chat.rtc.wkrtc-mergeReleaseResources-64:/values-en/values-en.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/1204ed2527a3a70e025b5ae8635ce475/transformed/jetified-BaseRecyclerViewAdapterHelper-3.0.14/res/values-en/values-en.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/5f1bdcf894bf887ee58daf834608eeeb/transformed/jetified-BaseRecyclerViewAdapterHelper-3.0.14/res/values-en/values-en.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

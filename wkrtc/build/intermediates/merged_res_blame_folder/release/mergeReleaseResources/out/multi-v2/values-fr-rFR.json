@@ -4,7 +4,7 @@
             "outputFile": "com.chat.rtc.wkrtc-release-66:/values-fr-rFR/values-fr-rFR.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/8fe0e22b027770133251d272769fa883/transformed/jetified-pictureselector-v3.11.2/res/values-fr-rFR/values-fr-rFR.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/19aae2f3b321756763e831280fb604c0/transformed/jetified-pictureselector-v3.11.2/res/values-fr-rFR/values-fr-rFR.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -19,7 +19,7 @@
             "outputFile": "com.chat.rtc.wkrtc-mergeReleaseResources-64:/values-fr-rFR/values-fr-rFR.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/8fe0e22b027770133251d272769fa883/transformed/jetified-pictureselector-v3.11.2/res/values-fr-rFR/values-fr-rFR.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/19aae2f3b321756763e831280fb604c0/transformed/jetified-pictureselector-v3.11.2/res/values-fr-rFR/values-fr-rFR.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

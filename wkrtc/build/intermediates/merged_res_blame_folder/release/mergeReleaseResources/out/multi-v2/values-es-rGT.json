@@ -4,7 +4,7 @@
             "outputFile": "com.chat.rtc.wkrtc-release-66:/values-es-rGT/values-es-rGT.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/fac28c899980aba80aca6cd74dfec30d/transformed/jetified-android-image-cropper-4.6.0/res/values-es-rGT/values-es-rGT.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/a34716f80e4b90e2d9e982bd177548ad/transformed/jetified-android-image-cropper-4.6.0/res/values-es-rGT/values-es-rGT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -19,7 +19,7 @@
             "outputFile": "com.chat.rtc.wkrtc-mergeReleaseResources-64:/values-es-rGT/values-es-rGT.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/fac28c899980aba80aca6cd74dfec30d/transformed/jetified-android-image-cropper-4.6.0/res/values-es-rGT/values-es-rGT.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/a34716f80e4b90e2d9e982bd177548ad/transformed/jetified-android-image-cropper-4.6.0/res/values-es-rGT/values-es-rGT.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

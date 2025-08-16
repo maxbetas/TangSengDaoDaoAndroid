@@ -1,7 +1,7 @@
 [
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_navigation_menu.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_navigation_menu.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_navigation_menu.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/common_used_emoji_footer_layout.xml",
@@ -13,35 +13,35 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_navigation_item_separator.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_navigation_item_separator.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_navigation_item_separator.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/m3_alert_dialog.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/m3_alert_dialog.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/m3_alert_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_text_input_start_icon.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_text_input_start_icon.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_text_input_start_icon.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_player_control_rewind_button.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_player_control_rewind_button.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_player_control_rewind_button.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_radial_view_group.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_radial_view_group.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_radial_view_group.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_clock_period_toggle.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_clock_period_toggle.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_clock_period_toggle.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_preview_gallery_item.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_preview_gallery_item.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_preview_gallery_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_layout_tab_text.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_layout_tab_text.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_layout_tab_text.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_msg_reactions_user_layout.xml",
@@ -49,7 +49,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_big_media_narrow.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_template_big_media_narrow.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_template_big_media_narrow.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_loading.xml",
@@ -57,7 +57,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/cast_expanded_controller_activity.xml",
-        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-41:/layout/cast_expanded_controller_activity.xml"
+        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-43:/layout/cast_expanded_controller_activity.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/wk_chat_list_footer.xml",
@@ -65,23 +65,23 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_playback_control.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_playback_control.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_playback_control.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_text_input_end_icon.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_text_input_end_icon.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_text_input_end_icon.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_month_labeled.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_month_labeled.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_month_labeled.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_fullscreen.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_fullscreen.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_fullscreen.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_clockface_textview.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_clockface_textview.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_clockface_textview.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_title_layout.xml",
@@ -109,11 +109,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/cast_mini_controller.xml",
-        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-41:/layout/cast_mini_controller.xml"
+        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-43:/layout/cast_mini_controller.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/select_dialog_multichoice_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/select_dialog_multichoice_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/select_dialog_multichoice_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_update_group_name_layout.xml",
@@ -121,7 +121,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_divider.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_divider.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_divider.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_msg_result_layout.xml",
@@ -141,11 +141,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_alert_dialog.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_alert_dialog.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_alert_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_fragment_selector.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_fragment_selector.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_fragment_selector.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_all_member_layout.xml",
@@ -153,23 +153,23 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_dialog_camera_selected.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_dialog_camera_selected.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_dialog_camera_selected.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_attach_impl_list.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_attach_impl_list.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_attach_impl_list.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_big_media_custom.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_template_big_media_custom.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_template_big_media_custom.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_menu_item_action_area.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_menu_item_action_area.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_menu_item_action_area.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_styled_settings_list_item.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_styled_settings_list_item.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_styled_settings_list_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_choose_chat_layout.xml",
@@ -177,15 +177,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_days_of_week.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_days_of_week.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_days_of_week.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_fragment_preview.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_fragment_preview.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_fragment_preview.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_bottom_sheet_dialog.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_bottom_sheet_dialog.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_bottom_sheet_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_function_layout.xml",
@@ -197,15 +197,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_activity_container.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_activity_container.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_activity_container.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/brvah_quick_view_load_more.xml",
-        "source": "com.chat.security.wksecurity-jetified-BaseRecyclerViewAdapterHelper-3.0.14-3:/layout/brvah_quick_view_load_more.xml"
+        "source": "com.chat.security.wksecurity-jetified-BaseRecyclerViewAdapterHelper-3.0.14-28:/layout/brvah_quick_view_load_more.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_template_big_media_narrow_custom.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_template_big_media_narrow_custom.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/wk_toast_layout.xml",
@@ -213,11 +213,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_adapter_text.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_adapter_text.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_adapter_text.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_template_lines_media.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_template_lines_media.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_template_lines_media.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_confirm_dialog_view.xml",
@@ -225,11 +225,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_alert_select_dialog_singlechoice.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_alert_select_dialog_singlechoice.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_alert_select_dialog_singlechoice.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_layout_snackbar.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_layout_snackbar.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_layout_snackbar.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/view_emoji_panel.xml",
@@ -237,11 +237,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_player_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_player_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_player_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/srl_classics_footer.xml",
-        "source": "com.chat.security.wksecurity-jetified-refresh-footer-classics-2.0.6-0:/layout/srl_classics_footer.xml"
+        "source": "com.chat.security.wksecurity-jetified-refresh-footer-classics-2.0.6-3:/layout/srl_classics_footer.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_chat_personal_layout.xml",
@@ -249,11 +249,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_layout_custom.xml",
-        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-50:/layout/video_layout_custom.xml"
+        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-19:/layout/video_layout_custom.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_volume_dialog.xml",
-        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-50:/layout/video_volume_dialog.xml"
+        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-19:/layout/video_volume_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_empty_view.xml",
@@ -261,23 +261,23 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_progress_dialog.xml",
-        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-50:/layout/video_progress_dialog.xml"
+        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-19:/layout/video_progress_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_month_navigation.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_month_navigation.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_month_navigation.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_header_fullscreen.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_header_fullscreen.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_header_fullscreen.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_search_bar.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_search_bar.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_search_bar.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/cast_tracks_chooser_dialog_layout.xml",
-        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-41:/layout/cast_tracks_chooser_dialog_layout.xml"
+        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-43:/layout/cast_tracks_chooser_dialog_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/custom_image_viewer_popup.xml",
@@ -289,7 +289,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_bubble_attach_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_bubble_attach_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_bubble_attach_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_play_video_layout.xml",
@@ -301,7 +301,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/cast_intro_overlay.xml",
-        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-41:/layout/cast_intro_overlay.xml"
+        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-43:/layout/cast_intro_overlay.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_all_members_layout.xml",
@@ -309,7 +309,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_media.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_template_media.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_template_media.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/frag_my_layout.xml",
@@ -325,7 +325,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_styled_sub_settings_list_item.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_styled_sub_settings_list_item.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_styled_sub_settings_list_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_user_detail_layout.xml",
@@ -333,7 +333,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_navigation_item_header.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_navigation_item_header.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_navigation_item_header.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_msg_with_date_title_layout.xml",
@@ -349,15 +349,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/m3_side_sheet_dialog.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/m3_side_sheet_dialog.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/m3_side_sheet_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/select_dialog_item_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/select_dialog_item_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/select_dialog_item_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_popup_menu_header_item_layout.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_popup_menu_header_item_layout.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_user_layout.xml",
@@ -365,11 +365,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_styled_settings_list.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_styled_settings_list.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_styled_settings_list.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_cast_group_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_cast_group_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_cast_group_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_setting_layout.xml",
@@ -377,23 +377,23 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_brightness.xml",
-        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-50:/layout/video_brightness.xml"
+        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-19:/layout/video_brightness.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_cast_route_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_cast_route_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_cast_route_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_legacy_player_control_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_legacy_player_control_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_legacy_player_control_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_alert_dialog_actions.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_alert_dialog_actions.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_alert_dialog_actions.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_preview_video.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_preview_video.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_preview_video.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_new_version_layout.xml",
@@ -401,11 +401,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_alert_dialog_title.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_alert_dialog_title.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_alert_dialog_title.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_header_title_text.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_header_title_text.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_header_title_text.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_voice.xml",
@@ -417,27 +417,27 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_media_cancel_action.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_media_cancel_action.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_media_cancel_action.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_player_control_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_player_control_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_player_control_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_media_custom.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_template_media_custom.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_template_media_custom.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_picker_dialog.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_picker_dialog.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_picker_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/support_simple_spinner_dropdown_item.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/support_simple_spinner_dropdown_item.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/support_simple_spinner_dropdown_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_part_chronometer.xml",
-        "source": "com.chat.security.wksecurity-core-1.13.1-44:/layout/notification_template_part_chronometer.xml"
+        "source": "com.chat.security.wksecurity-core-1.13.1-62:/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_destroy_account.xml",
@@ -445,7 +445,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_player_control_ffwd_button.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_player_control_ffwd_button.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_player_control_ffwd_button.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_system_layout.xml",
@@ -461,7 +461,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_bottom_navigation_item.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_bottom_navigation_item.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_bottom_navigation_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_mail_list_layout.xml",
@@ -473,11 +473,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_empty.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_empty.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_empty.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_year.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_year.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_year.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_search_user_layout.xml",
@@ -485,7 +485,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_picker_route_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_picker_route_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_picker_route_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/pop_operate.xml",
@@ -493,7 +493,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_screen_simple.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_screen_simple.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_screen_simple.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_emoji_layout.xml",
@@ -501,11 +501,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_adapter_text_match.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_adapter_text_match.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_adapter_text_match.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_tooltip.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_tooltip.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_tooltip.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_delete_member_layout.xml",
@@ -529,7 +529,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_partshadow_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_partshadow_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_partshadow_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_update_group_remark_layout.xml",
@@ -537,15 +537,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/cast_help_text.xml",
-        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-41:/layout/cast_help_text.xml"
+        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-43:/layout/cast_help_text.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_list_menu_item_icon.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_list_menu_item_icon.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_picker_header_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_picker_header_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_picker_header_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_common_refresh_list_layout.xml",
@@ -553,23 +553,23 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_item_grid_audio.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_item_grid_audio.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_item_grid_audio.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_screen_toolbar.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_screen_toolbar.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_screen_toolbar.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_complete_selected_layout.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_complete_selected_layout.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_complete_selected_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_months.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_months.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_months.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_position_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_position_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_position_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_group_notice_layout.xml",
@@ -581,7 +581,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_custom_preview_image.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_custom_preview_image.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_custom_preview_image.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_card.xml",
@@ -589,11 +589,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_layout_tab_icon.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_layout_tab_icon.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_layout_tab_icon.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_item_grid_camera.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_item_grid_camera.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_item_grid_camera.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_contacts_header_layout.xml",
@@ -601,7 +601,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_big_media_narrow_custom.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_template_big_media_narrow_custom.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_chat_layout.xml",
@@ -613,7 +613,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_clock_display_divider.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_clock_display_divider.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_clock_display_divider.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_global_span_layout.xml",
@@ -621,7 +621,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_chooser_list_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_chooser_list_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_chooser_list_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_choose_remind_layout.xml",
@@ -633,7 +633,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_action_bar_title_item.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_action_bar_title_item.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_action_bar_title_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/frag_emoji_layout.xml",
@@ -641,19 +641,19 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ime_secondary_split_test_activity.xml",
-        "source": "com.chat.security.wksecurity-core-1.13.1-44:/layout/ime_secondary_split_test_activity.xml"
+        "source": "com.chat.security.wksecurity-core-1.13.1-62:/layout/ime_secondary_split_test_activity.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_select_dialog_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_select_dialog_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_select_dialog_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_window_folder.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_window_folder.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_window_folder.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_vertical.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_vertical.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_vertical.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/wk_pwd_view_layout.xml",
@@ -661,7 +661,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_layout_snackbar.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_layout_snackbar.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_layout_snackbar.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_tab_main.xml",
@@ -669,7 +669,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/cast_tracks_chooser_dialog_row_layout.xml",
-        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-41:/layout/cast_tracks_chooser_dialog_row_layout.xml"
+        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-43:/layout/cast_tracks_chooser_dialog_row_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_file_helper_layout.xml",
@@ -677,7 +677,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_alert_dialog_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_alert_dialog_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_alert_dialog_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_choose_video_call_memberes_layout.xml",
@@ -693,15 +693,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_time_input.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_time_input.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_time_input.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_controller_volume_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_controller_volume_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_controller_volume_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_cast_media_metadata.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_cast_media_metadata.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_cast_media_metadata.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/common_used_emoji_header_layout.xml",
@@ -713,7 +713,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_track_selection_dialog.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_track_selection_dialog.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_track_selection_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_logger_layout.xml",
@@ -725,39 +725,39 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_image_viewer_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_image_viewer_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_image_viewer_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/srl_classics_header.xml",
-        "source": "com.chat.security.wksecurity-jetified-refresh-header-classics-2.0.6-55:/layout/srl_classics_header.xml"
+        "source": "com.chat.security.wksecurity-jetified-refresh-header-classics-2.0.6-45:/layout/srl_classics_header.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_template_media_custom.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_template_media_custom.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_template_media_custom.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/m3_alert_dialog_title.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/m3_alert_dialog_title.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/m3_alert_dialog_title.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_layout_sample_ad.xml",
-        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-50:/layout/video_layout_sample_ad.xml"
+        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-19:/layout/video_layout_sample_ad.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_timepicker_dialog.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_timepicker_dialog.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_timepicker_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_list_menu_item_checkbox.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_list_menu_item_checkbox.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_list_menu_item_checkbox.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/crop_image_activity.xml",
-        "source": "com.chat.security.wksecurity-jetified-android-image-cropper-4.6.0-60:/layout/crop_image_activity.xml"
+        "source": "com.chat.security.wksecurity-jetified-android-image-cropper-4.6.0-44:/layout/crop_image_activity.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_controller_material_dialog_b.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_controller_material_dialog_b.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_controller_material_dialog_b.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_img.xml",
@@ -769,15 +769,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_alert_dialog_title_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_alert_dialog_title_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_alert_dialog_title_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_big_media.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_template_big_media.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_template_big_media.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/select_dialog_singlechoice_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/select_dialog_singlechoice_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/select_dialog_singlechoice_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_layout.xml",
@@ -785,11 +785,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_navigation_rail_item.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_navigation_rail_item.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_navigation_rail_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_list_menu_item_radio.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_list_menu_item_radio.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_list_menu_item_radio.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_search_all_layout.xml",
@@ -797,15 +797,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_text_input_date_range.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_text_input_date_range.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_text_input_date_range.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_cast_header_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_cast_header_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_cast_header_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_media_cancel_action.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_media_cancel_action.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_media_cancel_action.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_group_member_layout.xml",
@@ -821,15 +821,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_day_of_week.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_day_of_week.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_day_of_week.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_dialog_title_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_dialog_title_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_dialog_title_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_bottom_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_bottom_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_bottom_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_search_msg_img_layout.xml",
@@ -837,7 +837,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_media_action.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_media_action.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_media_action.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_friend_layout.xml",
@@ -845,7 +845,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_template_media.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_template_media.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_template_media.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_delete_group_member_layout.xml",
@@ -861,31 +861,31 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_action_mode_close_item_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_action_mode_close_item_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_album_folder_item.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_album_folder_item.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_album_folder_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_time_chip.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_time_chip.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_time_chip.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_center_impl_loading.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_center_impl_loading.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_center_impl_loading.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_lines_media.xml",
-        "source": "com.chat.security.wksecurity-media-1.7.0-19:/layout/notification_template_lines_media.xml"
+        "source": "com.chat.security.wksecurity-media-1.7.0-14:/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_navigation_menu_item.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_navigation_menu_item.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_navigation_menu_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_cast_group_volume_item.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_cast_group_volume_item.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_cast_group_volume_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_msg_layout.xml",
@@ -893,23 +893,23 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_preview_image.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_preview_image.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_preview_image.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_center_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_center_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_center_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_list_menu_item_layout.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_list_menu_item_layout.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_list_menu_item_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_header_toggle.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_header_toggle.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_header_toggle.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/input_method_extract_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-emoji2-views-1.5.0-1:/layout/input_method_extract_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-emoji2-views-1.5.0-17:/layout/input_method_extract_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_language_layout.xml",
@@ -937,7 +937,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_textinput_timepicker.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_textinput_timepicker.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_textinput_timepicker.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_msg_img_layout.xml",
@@ -961,7 +961,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_alert_dialog_button_bar_material.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_mail_list_text.xml",
@@ -969,7 +969,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_alert_select_dialog_item.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_alert_select_dialog_item.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_alert_select_dialog_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_choose_chat_layout.xml",
@@ -977,7 +977,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_alert_select_dialog_multichoice.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_alert_select_dialog_multichoice.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_alert_select_dialog_multichoice.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_msg_with_date_child_layout.xml",
@@ -989,7 +989,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_navigation_item_subheader.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_navigation_item_subheader.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_navigation_item_subheader.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_chat_multi_froward_content.xml",
@@ -997,7 +997,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_cast_dialog.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_cast_dialog.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_cast_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_contacts_layout.xml",
@@ -1005,43 +1005,43 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_activity_chooser_view.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_activity_chooser_view.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_activity_chooser_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_expanded_menu_layout.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_expanded_menu_layout.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_expanded_menu_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_attach_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_attach_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_attach_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_timepicker_textinput_display.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_timepicker_textinput_display.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_timepicker_textinput_display.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_clockface_view.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_clockface_view.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_clockface_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_item_grid_video.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_item_grid_video.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_item_grid_video.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_actions.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_actions.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_actions.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_preview_audio.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_preview_audio.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_preview_audio.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_remind_dialog.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_remind_dialog.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_remind_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_alert_dialog.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_alert_dialog.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_alert_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_unread_msg_line.xml",
@@ -1053,7 +1053,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/crop_image_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-android-image-cropper-4.6.0-60:/layout/crop_image_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-android-image-cropper-4.6.0-44:/layout/crop_image_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_base_layout.xml",
@@ -1073,15 +1073,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_chooser_dialog.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_chooser_dialog.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_chooser_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_timepicker.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_timepicker.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_timepicker.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_action_menu_item_layout.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_action_menu_item_layout.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_action_menu_item_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_robot_gif_layout.xml",
@@ -1089,19 +1089,19 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_month.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_month.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_month.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_chip_input_combo.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_chip_input_combo.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_chip_input_combo.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_drawer_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_drawer_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_drawer_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_bottom_nav_bar.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_bottom_nav_bar.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_bottom_nav_bar.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_webvieiw_layout.xml",
@@ -1109,11 +1109,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/m3_auto_complete_simple_item.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/m3_auto_complete_simple_item.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/m3_auto_complete_simple_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_auto_complete_simple_item.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_auto_complete_simple_item.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_auto_complete_simple_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_mail_list_layout.xml",
@@ -1121,11 +1121,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/m3_alert_dialog_actions.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/m3_alert_dialog_actions.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/m3_alert_dialog_actions.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_day.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_day.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_day.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_global_message_layout.xml",
@@ -1137,7 +1137,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_template_big_media_narrow.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_template_big_media_narrow.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_template_big_media_narrow.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_text.xml",
@@ -1145,15 +1145,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_search_view.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_search_view.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_search_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_bottom_impl_list.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_bottom_impl_list.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_bottom_impl_list.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_navigation_item.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_navigation_item.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_navigation_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_span_empty_view.xml",
@@ -1165,7 +1165,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_text_input_date.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_text_input_date.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_text_input_date.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_message_record_layout.xml",
@@ -1185,7 +1185,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_header_dialog.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_header_dialog.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_header_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_typing_layout.xml",
@@ -1193,11 +1193,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_dialog.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_dialog.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_popup_menu_item_layout.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_popup_menu_item_layout.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_global_text_layout.xml",
@@ -1213,19 +1213,19 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_center_impl_list.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_center_impl_list.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_center_impl_list.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mr_volume_control.xml",
-        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-29:/layout/mr_volume_control.xml"
+        "source": "com.chat.security.wksecurity-mediarouter-1.3.0-30:/layout/mr_volume_control.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ime_base_split_test_activity.xml",
-        "source": "com.chat.security.wksecurity-core-1.13.1-44:/layout/ime_base_split_test_activity.xml"
+        "source": "com.chat.security.wksecurity-core-1.13.1-62:/layout/ime_base_split_test_activity.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_media_action.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_media_action.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_media_action.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_search_channel_layout.xml",
@@ -1233,7 +1233,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_calendar_horizontal.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_calendar_horizontal.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_calendar_horizontal.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_global_channel_layout.xml",
@@ -1249,27 +1249,27 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_search_view.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_search_view.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_search_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_action_menu_layout.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_action_menu_layout.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_action_menu_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_template_big_media.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_template_big_media.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_template_big_media.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_picker_header_selection_text.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_picker_header_selection_text.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_picker_header_selection_text.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_layout_standard.xml",
-        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-50:/layout/video_layout_standard.xml"
+        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-19:/layout/video_layout_standard.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_center_impl_confirm.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_center_impl_confirm.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_center_impl_confirm.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/item_app_module_layout.xml",
@@ -1285,11 +1285,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_action_bar_up_container.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_action_bar_up_container.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_action_bar_up_container.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/cast_device_chooser_dialog.xml",
-        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-41:/layout/cast_device_chooser_dialog.xml"
+        "source": "com.chat.security.wksecurity-jetified-play-services-cast-framework-21.3.0-43:/layout/cast_device_chooser_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_set_font_size_layout.xml",
@@ -1301,7 +1301,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/design_layout_snackbar_include.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/design_layout_snackbar_include.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/design_layout_snackbar_include.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/chat_item_multi_forward.xml",
@@ -1313,7 +1313,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_search_dropdown_item_icons_2line.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_search_dropdown_item_icons_2line.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/new_img_layout.xml",
@@ -1321,7 +1321,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/material_clock_display.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/material_clock_display.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/material_clock_display.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/choose_chat_header_layout.xml",
@@ -1329,11 +1329,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_item_grid_image.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_item_grid_image.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_item_grid_image.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/mtrl_layout_snackbar_include.xml",
-        "source": "com.chat.security.wksecurity-material-1.12.0-12:/layout/mtrl_layout_snackbar_include.xml"
+        "source": "com.chat.security.wksecurity-material-1.12.0-33:/layout/mtrl_layout_snackbar_include.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/frag_chat_conversation_layout.xml",
@@ -1341,11 +1341,11 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_screen_simple_overlay_action_mode.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_screen_simple_overlay_action_mode.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_screen_simple_overlay_action_mode.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_action_mode_bar.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_action_mode_bar.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_action_mode_bar.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/act_msg_notices_set_layout.xml",
@@ -1353,15 +1353,15 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/exo_list_divider.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-26:/layout/exo_list_divider.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-ui-1.4.1-11:/layout/exo_list_divider.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/custom_dialog.xml",
-        "source": "com.chat.security.wksecurity-core-1.13.1-44:/layout/custom_dialog.xml"
+        "source": "com.chat.security.wksecurity-core-1.13.1-62:/layout/custom_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_activity_chooser_view_list_item.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_activity_chooser_view_list_item.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_activity_chooser_view_list_item.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-mergeReleaseResources-66:/layout/item_security_menu_layout.xml",
@@ -1369,7 +1369,7 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_common_dialog.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_common_dialog.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_common_dialog.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_layout_normal.xml",
@@ -1377,19 +1377,19 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/_xpopup_fullscreen_popup_view.xml",
-        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-2:/layout/_xpopup_fullscreen_popup_view.xml"
+        "source": "com.chat.security.wksecurity-jetified-XPopup-2.9.19-54:/layout/_xpopup_fullscreen_popup_view.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/media3_notification_template_big_media_custom.xml",
-        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-59:/layout/media3_notification_template_big_media_custom.xml"
+        "source": "com.chat.security.wksecurity-jetified-media3-session-1.4.1-42:/layout/media3_notification_template_big_media_custom.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/video_layout_ad.xml",
-        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-50:/layout/video_layout_ad.xml"
+        "source": "com.chat.security.wksecurity-jetified-gsyvideoplayer-java-v10.0.0-19:/layout/video_layout_ad.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_cascading_menu_item_layout.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_cascading_menu_item_layout.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_cascading_menu_item_layout.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/wk_item_chat_tool_bar.xml",
@@ -1397,14 +1397,14 @@
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/abc_screen_content_include.xml",
-        "source": "com.chat.security.wksecurity-appcompat-1.7.0-30:/layout/abc_screen_content_include.xml"
+        "source": "com.chat.security.wksecurity-appcompat-1.7.0-38:/layout/abc_screen_content_include.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/notification_template_part_time.xml",
-        "source": "com.chat.security.wksecurity-core-1.13.1-44:/layout/notification_template_part_time.xml"
+        "source": "com.chat.security.wksecurity-core-1.13.1-62:/layout/notification_template_part_time.xml"
     },
     {
         "merged": "com.chat.security.wksecurity-release-67:/layout/ps_title_bar.xml",
-        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-36:/layout/ps_title_bar.xml"
+        "source": "com.chat.security.wksecurity-jetified-pictureselector-v3.11.2-10:/layout/ps_title_bar.xml"
     }
 ]

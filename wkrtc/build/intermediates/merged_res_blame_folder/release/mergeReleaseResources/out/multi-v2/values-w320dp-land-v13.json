@@ -4,7 +4,7 @@
             "outputFile": "com.chat.rtc.wkrtc-release-66:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/2b280e1688d96e51f7225d14d459757e/transformed/material-1.12.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/66f95c3e86c548113f0d463e63a26eeb/transformed/material-1.12.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -19,7 +19,7 @@
             "outputFile": "com.chat.rtc.wkrtc-mergeReleaseResources-64:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/2b280e1688d96e51f7225d14d459757e/transformed/material-1.12.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/66f95c3e86c548113f0d463e63a26eeb/transformed/material-1.12.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -4,7 +4,18 @@
             "outputFile": "com.chat.security.wksecurity-release-67:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/2b280e1688d96e51f7225d14d459757e/transformed/material-1.12.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/77e420b631ee565d215ea8f2dac4d27e/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1225,1975,2094,2221,2443,2667,2782,2889,3002",
+                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
+                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
+                    }
+                },
+                {
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/66f95c3e86c548113f0d463e63a26eeb/transformed/material-1.12.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/53eb72e8523c69b6fe0e233b2a7972a4/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/e22d51eed1d5b8116419745205033730/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -39,17 +50,6 @@
                         "endLines": "52",
                         "endColumns": "12",
                         "endOffsets": "3377"
-                    }
-                },
-                {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/7fb73c608993a57a53edd6888a24afff/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1225,1975,2094,2221,2443,2667,2782,2889,3002",
-                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
-                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
-                        "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
                     }
                 }
             ]
@@ -58,7 +58,18 @@
             "outputFile": "com.chat.security.wksecurity-mergeReleaseResources-65:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/2b280e1688d96e51f7225d14d459757e/transformed/material-1.12.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/77e420b631ee565d215ea8f2dac4d27e/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,190,325,400,487,1225,1975,2094,2221,2443,2667,2782,2889,3002",
+                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
+                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
+                        "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
+                    }
+                },
+                {
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/66f95c3e86c548113f0d463e63a26eeb/transformed/material-1.12.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,5,9,13,16,19,22,25,28,32",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -77,7 +88,7 @@
                     }
                 },
                 {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/53eb72e8523c69b6fe0e233b2a7972a4/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
+                    "source": "/Users/echo/.gradle/caches/8.11.1/transforms/e22d51eed1d5b8116419745205033730/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -93,17 +104,6 @@
                         "endLines": "52",
                         "endColumns": "12",
                         "endOffsets": "3377"
-                    }
-                },
-                {
-                    "source": "/Users/echo/.gradle/caches/8.10.2/transforms/7fb73c608993a57a53edd6888a24afff/transformed/appcompat-1.7.0/res/values-v23/values-v23.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,190,325,400,487,1225,1975,2094,2221,2443,2667,2782,2889,3002",
-                        "endLines": "2,3,4,5,19,33,34,35,38,42,43,44,45,49",
-                        "endColumns": "134,134,74,86,12,12,118,126,12,12,114,106,112,12",
-                        "endOffsets": "185,320,395,482,1220,1970,2089,2216,2438,2662,2777,2884,2997,3227"
                     }
                 }
             ]
