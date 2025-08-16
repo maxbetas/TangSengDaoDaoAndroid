@@ -9,15 +9,15 @@ android {
     signingConfigs {
         debug {
             storeFile file('../sign.jks')
-            storePassword 'pZ4KU5jAMDRmxQ3f4KWA'
+            storePassword project.findProperty("STORE_PASSWORD") ?: 'pZ4KU5jAMDRmxQ3f4KWA'
             keyAlias = 'xingxunliao'
-            keyPassword 'pZ4KU5jAMDRmxQ3f4KWA'
+            keyPassword project.findProperty("KEY_PASSWORD") ?: 'pZ4KU5jAMDRmxQ3f4KWA'
         }
         release {
             storeFile file('../sign.jks')
-            storePassword 'pZ4KU5jAMDRmxQ3f4KWA'
+            storePassword project.findProperty("STORE_PASSWORD") ?: 'pZ4KU5jAMDRmxQ3f4KWA'
             keyAlias = 'xingxunliao'
-            keyPassword 'pZ4KU5jAMDRmxQ3f4KWA'
+            keyPassword project.findProperty("KEY_PASSWORD") ?: 'pZ4KU5jAMDRmxQ3f4KWA'
         }
     }
     namespace 'com.xingxun.xingxunliao'
