@@ -1,6 +1,6 @@
 package com.chat.scan;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.chat.scan.entity.ScanResult;
 
 import io.reactivex.rxjava3.core.Observable;

@@ -1,7 +1,7 @@
 package com.chat.advanced.service
 
 import android.text.TextUtils
-import com.alibaba.fastjson.JSONObject
+import com.alibaba.fastjson2.JSONObject
 import com.chat.advanced.entity.ChatBgEntity
 import com.chat.advanced.entity.MsgReadDetailEntity
 import com.chat.base.base.WKBaseModel

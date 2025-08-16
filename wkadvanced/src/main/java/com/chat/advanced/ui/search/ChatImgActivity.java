@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.chat.advanced.R;
 import com.chat.advanced.databinding.ActSearchChatImgLayoutBinding;
 import com.chat.base.base.WKBaseActivity;

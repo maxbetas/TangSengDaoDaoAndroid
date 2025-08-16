@@ -2,8 +2,8 @@ package com.chat.uikit.message
 
 import android.view.View
 import android.widget.TextView
-import com.alibaba.fastjson.JSONArray
-import com.alibaba.fastjson.JSONObject
+import com.alibaba.fastjson2.JSONArray
+import com.alibaba.fastjson2.JSONObject
 import com.chat.base.base.WKBaseActivity
 import com.chat.base.config.WKConfig
 import com.chat.base.config.WKConstants

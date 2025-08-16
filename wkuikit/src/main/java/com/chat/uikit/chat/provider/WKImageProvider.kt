@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.alibaba.fastjson.JSONObject
+import com.alibaba.fastjson2.JSONObject
 import com.chat.base.config.WKApiConfig
 import com.chat.base.endpoint.EndpointManager
 import com.chat.base.endpoint.EndpointSID

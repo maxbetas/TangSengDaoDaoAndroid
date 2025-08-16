@@ -2,7 +2,7 @@ package com.chat.uikit.crypto;
 
 import androidx.annotation.NonNull;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.chat.base.base.WKBaseModel;
 import com.chat.base.net.HttpResponseCode;
 import com.chat.base.net.IRequestResultListener;

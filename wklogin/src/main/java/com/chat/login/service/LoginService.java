@@ -1,6 +1,6 @@
 package com.chat.login.service;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.chat.base.entity.UserInfoEntity;
 import com.chat.base.net.entity.CommonResponse;
 import com.chat.login.entity.CountryCodeEntity;

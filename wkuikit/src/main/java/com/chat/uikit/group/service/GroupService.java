@@ -1,6 +1,6 @@
 package com.chat.uikit.group.service;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.chat.base.net.entity.CommonResponse;
 import com.chat.uikit.group.GroupEntity;
 import com.chat.uikit.group.service.entity.GroupMember;

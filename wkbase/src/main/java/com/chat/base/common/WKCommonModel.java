@@ -2,7 +2,7 @@ package com.chat.base.common;
 
 import android.text.TextUtils;
 
-import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson2.JSON;
 import com.chat.base.R;
 import com.chat.base.WKBaseApplication;
 import com.chat.base.base.WKBaseModel;

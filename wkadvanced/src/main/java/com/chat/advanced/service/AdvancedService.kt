@@ -1,6 +1,6 @@
 package com.chat.advanced.service
 
-import com.alibaba.fastjson.JSONObject
+import com.alibaba.fastjson2.JSONObject
 import com.chat.advanced.entity.ChatBgEntity
 import com.chat.advanced.entity.MsgReadDetailEntity
 import com.chat.base.entity.UserInfoEntity

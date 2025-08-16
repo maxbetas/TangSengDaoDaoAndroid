@@ -3,7 +3,7 @@ package com.chat.login.service;
 
 import android.text.TextUtils;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.chat.base.base.WKBaseModel;
 import com.chat.base.config.WKApiConfig;
 import com.chat.base.config.WKConfig;

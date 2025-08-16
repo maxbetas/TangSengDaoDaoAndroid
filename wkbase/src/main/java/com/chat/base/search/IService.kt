@@ -1,6 +1,6 @@
 package com.chat.base.search
 
-import com.alibaba.fastjson.JSONObject
+import com.alibaba.fastjson2.JSONObject
 import com.chat.base.entity.GlobalSearch
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.Body
