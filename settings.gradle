@@ -16,6 +16,10 @@ dependencyResolutionManagement {
         maven {
             url "https://maven.google.com"
         }
+        // 小米推送AAR版本配置
+        flatDir {
+            dirs 'wkpush/libs'
+        }
     }
 }
 rootProject.name = "TsddClient"

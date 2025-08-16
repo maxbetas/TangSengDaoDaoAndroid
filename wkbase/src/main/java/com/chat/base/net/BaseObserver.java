@@ -44,6 +44,8 @@ public abstract class BaseObserver<T> implements Observer<T> {
                 WKBaseApplication.getInstance().closeDbHelper();
                 WKConfig.getInstance().clearInfo();
                 WKIM.getInstance().getConnectionManager().disconnect(true);
+                // 401错误时也需要注销推送
+                EndpointManager.getInstance().invoke("wk_logout", null);
                 ActManagerUtils.getInstance().clearAllActivity();
                 EndpointManager.getInstance().invoke("main_show_home_view",0);
             }

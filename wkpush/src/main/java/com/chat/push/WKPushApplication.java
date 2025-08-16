@@ -20,6 +20,7 @@ import com.chat.base.ui.Theme;
 import com.chat.base.utils.WKDialogUtils;
 import com.chat.base.utils.WKToastUtils;
 import com.chat.base.utils.systembar.WKOSUtils;
+import com.chat.push.OsUtils;
 import com.chat.push.service.PushModel;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -34,6 +35,13 @@ import com.vivo.push.util.VivoPushException;
 import com.xiaomi.mipush.sdk.MiPushClient;
 
 import java.lang.ref.WeakReference;
+import android.app.ActivityManager;
+import android.os.Process;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Network;
+import android.net.NetworkCapabilities;
+import android.os.Build;
 
 /**
  * 2020-03-08 22:29
@@ -69,25 +77,11 @@ public class WKPushApplication {
         FirebaseApp.initializeApp(mContext.get());
         notifyChannel(WKBaseApplication.getInstance().application);
         getPushToken();
-//        if (!TextUtils.isEmpty(WKConfig.getInstance().getUid())) {
-//            if (OsUtils.isEmui()) {
-//                new Thread(() -> getHuaWeiToken(mContext.get())).start();
-//            } else if (OsUtils.isMiui()) {
-//                initXiaoMiPush(mContext.get());
-//            } else if (OsUtils.isOppo()) {
-//                initOPPO();
-//            } else if (OsUtils.isVivo()) {
-//                initVIVO();
-//            }
-//        }
 
     }
 
     private void getHuaWeiToken(Context context) {
         try {
-            // 从agconnect-service.json文件中读取appId
-//            String appId = new AGConnectOptionsBuilder().build(context).getString("client/app_id");
-//            String appId = AGConnectServicesConfig.fromContext(context).getString("client/app_id");
             // 输入token标识"HCM"
             String tokenScope = "HCM";
             String token = HmsInstanceId.getInstance(context).getToken(PushKeys.huaweiAPPID, tokenScope);
@@ -97,16 +91,101 @@ public class WKPushApplication {
                 PushModel.getInstance().registerDeviceToken(token, pushBundleID,"");
             }
         } catch (ApiException e) {
+            Log.e("华为推送", "获取token失败: " + e.getStatusCode() + " - " + e.getMessage());
         }
     }
 
     private void initXiaoMiPush(Context context) {
-        MiPushClient.registerPush(context, PushKeys.xiaoMiAppID, PushKeys.xiaoMiAppKey);
+        // 按照官方demo标准，只在主进程中初始化小米推送
+        if (isMainProcess(context)) {
+            // 按官方文档建议，检查网络状态（避免70000001错误）
+            if (isNetworkAvailable(context)) {
+                MiPushClient.registerPush(context, PushKeys.xiaoMiAppID, PushKeys.xiaoMiAppKey);
+                Log.d("小米推送", "网络状态正常，开始注册推送");
+            } else {
+                Log.w("小米推送", "网络不可用，推送注册可能失败");
+                // 仍然尝试注册，让SDK自己处理网络重连
+                MiPushClient.registerPush(context, PushKeys.xiaoMiAppID, PushKeys.xiaoMiAppKey);
+            }
+        }
+    }
+    
+    private boolean isMainProcess(Context context) {
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        if (am != null) {
+            java.util.List<ActivityManager.RunningAppProcessInfo> processInfos = am.getRunningAppProcesses();
+            String mainProcessName = context.getPackageName();
+            int myPid = Process.myPid();
+            for (ActivityManager.RunningAppProcessInfo info : processInfos) {
+                if (info.pid == myPid && mainProcessName.equals(info.processName)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    /**
+     * 按官方文档检查网络状态（避免70000001错误）
+     * 兼容新旧API版本
+     * @param context 上下文
+     * @return true如果网络可用
+     */
+    private boolean isNetworkAvailable(Context context) {
+        try {
+            ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+            if (cm == null) return true;
+            
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                // Android 6.0及以上使用新API
+                Network network = cm.getActiveNetwork();
+                if (network != null) {
+                    NetworkCapabilities capabilities = cm.getNetworkCapabilities(network);
+                    return capabilities != null && 
+                           (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) ||
+                            capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) ||
+                            capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET));
+                }
+                return false;
+            } else {
+                // Android 6.0以下使用旧API
+                NetworkInfo networkInfo = cm.getActiveNetworkInfo();
+                return networkInfo != null && networkInfo.isConnected();
+            }
+        } catch (Exception e) {
+            Log.w("网络检查", "网络状态检查异常: " + e.getMessage());
+        }
+        return true; // 异常时假设网络可用，让推送SDK自己处理
+    }
+    
+    /**
+     * 按官方文档注销所有推送服务（使regID失效）
+     */
+    private void unregisterAllPushServices() {
+        Context context = mContext != null ? mContext.get() : null;
+        if (context == null) return;
+        
+        try {
+            // 小米推送注销
+            if (OsUtils.isMiui()) {
+                MiPushClient.unregisterPush(context);
+                Log.d("小米推送", "已调用unregisterPush，regID将失效");
+            }
+            
+            // 其他厂商推送注销可根据需要添加
+            // 注意：大部分厂商推送没有明确的unregister方法
+            
+            Log.d("推送注销", "所有推送服务注销完成");
+        } catch (Exception e) {
+            Log.e("推送注销", "注销推送服务异常: " + e.getMessage());
+        }
     }
 
     private void initOPPO() {
-        HeytapPushManager.init(mContext.get(), true);
-        new Thread(() -> HeytapPushManager.register(mContext.get(), PushKeys.oppoAppKey, PushKeys.oppoAppSecret, new ICallBackResultService() {
+        Context context = mContext != null ? mContext.get() : null;
+        if (context == null) return;
+        HeytapPushManager.init(context, true);
+        new Thread(() -> HeytapPushManager.register(context, PushKeys.oppoAppKey, PushKeys.oppoAppSecret, new ICallBackResultService() {
             @Override
             public void onRegister(int i, String s) {
                 if (i == 0) {
@@ -136,19 +215,21 @@ public class WKPushApplication {
             }
 
             @Override
-            public void onError(int i, String s) {
-
+            public void onError(int errorCode, String errorMsg) {
+                Log.e("OPPO推送", "注册失败: " + errorCode + " - " + errorMsg);
             }
         })).start();
 
     }
 
     private void initVIVO() {
+        Context context = mContext != null ? mContext.get() : null;
+        if (context == null) return;
         try {
-            PushClient.getInstance(mContext.get()).initialize();
-            PushClient.getInstance(mContext.get()).turnOnPush(state -> {
+            PushClient.getInstance(context).initialize();
+            PushClient.getInstance(context).turnOnPush(state -> {
                 // TODO: 开关状态处理， 0代表成功
-                String regId = PushClient.getInstance(mContext.get()).getRegId();
+                String regId = PushClient.getInstance(context).getRegId();
                 if (!TextUtils.isEmpty(regId)) {
                     Log.e("获取vivopush", regId);
                     PushModel.getInstance().registerDeviceToken(regId, pushBundleID,"");
@@ -156,27 +237,13 @@ public class WKPushApplication {
             });
 
         } catch (VivoPushException e) {
-            e.printStackTrace();
+            Log.e("Vivo推送", "初始化失败: " + e.getMessage());
         }
     }
     
     private void initHonor() {
-        try {
-            // 荣耀推送初始化
-            // 根据官方文档：https://developer.honor.com/cn/kitdoc?category=base&kitId=11002&navigation=guides&docId=sdk-overview.md
-            // 荣耀推送SDK会自动初始化，不需要手动调用init方法
-            // 只需要确保在AndroidManifest.xml中正确配置了meta-data
-            Log.e("荣耀推送", "荣耀推送SDK已自动初始化");
-            
-            // 如果需要手动获取Token，可以调用：
-            // String token = HonorPushClient.getInstance(mContext.get()).getToken();
-            // if (!TextUtils.isEmpty(token)) {
-            //     Log.e("获取honorpush", token);
-            //     PushModel.getInstance().registerDeviceToken(token, pushBundleID, "HONOR");
-            // }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // 荣耀推送SDK自动初始化，无需手动操作
+        Log.e("荣耀推送", "荣耀推送SDK已自动初始化");
     }
 
     private void addListener() {
@@ -192,11 +259,8 @@ public class WKPushApplication {
         //注销推送
         EndpointManager.getInstance().setMethod("wk_logout", object -> {
             OsUtils.setBadge(WKBaseApplication.getInstance().getContext(), 0);
-//            PushModel.getInstance().unRegisterDeviceToken((code, msg) -> {
-//                if (code != HttpResponseCode.success) {
-//                    WKToastUtils.getInstance().showToastNormal(msg);
-//                }
-//            });
+            // 按官方文档要求，注销时需要unregisterPush（使regID失效）
+            unregisterAllPushServices();
             return null;
         });
 
@@ -210,59 +274,37 @@ public class WKPushApplication {
     }
 
     private void getPushToken() {
-        int statusCode = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(mContext.get());
-        Log.e("google play services", statusCode + "");
-        if (statusCode == ConnectionResult.SUCCESS) {
-            FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task1 -> {
-                if (!task1.isSuccessful()) {
-                    Log.e("获取FCM令牌错误", "-->");
-                    Log.w("Firebase", "Fetching FCM registration token failed", task1.getException());
-                    return;
-                }
-                // Get new FCM registration token
-                String token = task1.getResult();
-                Log.e("获取到FCM令牌", token);
-                PushModel.getInstance().registerDeviceToken(token, pushBundleID,"FIREBASE");
-            });
-        }else {
-            if (!TextUtils.isEmpty(WKConfig.getInstance().getUid())) {
-                if (OsUtils.isEmui()) {
-                    new Thread(() -> getHuaWeiToken(mContext.get())).start();
-                } else if (OsUtils.isMiui()) {
-                    initXiaoMiPush(mContext.get());
-                } else if (OsUtils.isOppo()) {
-                    initOPPO();
-                } else if (OsUtils.isVivo()) {
-                    initVIVO();
-                } else if (OsUtils.isHonor()) {
-                    initHonor();
-                }
+        Context context = mContext != null ? mContext.get() : null;
+        if (context == null) return;
+        // 优先使用厂商推送，确保推送的可靠性和稳定性
+        if (OsUtils.isEmui()) {
+            new Thread(() -> getHuaWeiToken(context)).start();
+        } else if (OsUtils.isMiui()) {
+            initXiaoMiPush(context);
+        } else if (OsUtils.isOppo()) {
+            initOPPO();
+        } else if (OsUtils.isVivo()) {
+            initVIVO();
+        } else if (OsUtils.isHonor()) {
+            initHonor();
+        } else {
+            // 仅在非厂商设备上使用Firebase作为备用推送
+            int statusCode = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context);
+            Log.e("google play services", statusCode + "");
+            if (statusCode == ConnectionResult.SUCCESS) {
+                FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task1 -> {
+                    if (!task1.isSuccessful()) {
+                        Log.e("获取FCM令牌错误", "-->");
+                        Log.w("Firebase", "Fetching FCM registration token failed", task1.getException());
+                        return;
+                    }
+                    // Get new FCM registration token
+                    String token = task1.getResult();
+                    Log.e("获取到FCM令牌", token);
+                    PushModel.getInstance().registerDeviceToken(token, pushBundleID,"FIREBASE");
+                });
             }
         }
-//        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(mContext.get()).addOnCompleteListener(new OnCompleteListener<Void>() {
-//            @Override
-//            public void onComplete(@NonNull Task<Void> task) {
-//                if (task.isSuccessful()) {
-//                    Log.d("Firebase", "onComplete: Play services OKAY");
-//                    //firebase 推送 （FCM）获取token（FCM令牌）
-//                    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task1 -> {
-//                        if (!task1.isSuccessful()) {
-//                            Log.e("获取FCM令牌错误", "-->");
-//                            Log.w("Firebase", "Fetching FCM registration token failed", task1.getException());
-//                            return;
-//                        }
-//                        // Get new FCM registration token
-//                        String token = task1.getResult();
-//                        Log.e("获取到FCM令牌", token);
-//                    });
-//
-//                } else {
-//                    Log.e("获取FCM令牌错误11", "-->");
-//                    // Show the user some UI explaining that the needed version
-//                    // of Play services Could not be installed and the app can't run.
-//                }
-//            }
-//        });
     }
 
     private static void notifyChannel(Application context) {

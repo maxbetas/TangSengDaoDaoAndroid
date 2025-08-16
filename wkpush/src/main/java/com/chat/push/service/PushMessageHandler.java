@@ -37,6 +37,11 @@ public class PushMessageHandler {
             return;
         }
         
+        // 按官方文档检查消息大小限制（小米推送最大4KB）
+        if (pushService.contains("小米") && !validateMessageSize(title, content)) {
+            Log.w(TAG, "小米推送消息过大，可能影响送达率");
+        }
+        
         // 标题为空时使用默认标题
         if (TextUtils.isEmpty(title)) {
             title = "新消息";
@@ -56,5 +61,33 @@ public class PushMessageHandler {
      */
     public void handlePushMessage(String pushService, String content) {
         handlePushMessage(pushService, null, content);
+    }
+    
+    /**
+     * 按官方文档验证消息大小（小米推送限制4KB）
+     * @param title 消息标题
+     * @param content 消息内容
+     * @return true如果消息大小合规
+     */
+    private boolean validateMessageSize(String title, String content) {
+        try {
+            // 计算消息总大小（UTF-8编码）
+            int titleSize = title != null ? title.getBytes("UTF-8").length : 0;
+            int contentSize = content != null ? content.getBytes("UTF-8").length : 0;
+            int totalSize = titleSize + contentSize;
+            
+            // 小米推送限制4KB = 4096字节
+            final int MAX_SIZE = 4096;
+            
+            if (totalSize > MAX_SIZE) {
+                Log.w(TAG, "消息大小超限: " + totalSize + "字节 > " + MAX_SIZE + "字节");
+                return false;
+            }
+            
+            return true;
+        } catch (Exception e) {
+            Log.w(TAG, "消息大小检查异常: " + e.getMessage());
+            return true; // 异常时不阻止消息处理
+        }
     }
 }

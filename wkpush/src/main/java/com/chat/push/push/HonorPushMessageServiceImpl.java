@@ -27,7 +27,8 @@ public class HonorPushMessageServiceImpl extends HonorMessageService {
         super.onMessageReceived(message);
         if (message != null && !TextUtils.isEmpty(message.getData())) {
             Log.e("收到荣耀推送消息", message.getData());
-            PushMessageHandler.getInstance().handlePushMessage("荣耀推送", message.getData());
+            // 使用3参数方法确保与其他厂商推送显示一致
+            PushMessageHandler.getInstance().handlePushMessage("荣耀推送", null, message.getData());
         }
     }
 

@@ -245,11 +245,13 @@ class TSApplication : MultiDexApplication() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name: CharSequence = applicationContext.getString(R.string.new_rtc_notification)
             val description = applicationContext.getString(R.string.new_rtc_notification_desc)
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            // 与PushNotificationHelper保持一致：IMPORTANCE_HIGH确保语音视频通话优先级最高
+            val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(WKConstants.newRTCChannelID, name, importance)
             channel.description = description
             channel.enableVibration(true)
-            channel.vibrationPattern = longArrayOf(0, 100, 100, 100, 100, 100)
+            // 与PushNotificationHelper保持一致：4秒振动-2秒停止-4秒振动
+            channel.vibrationPattern = longArrayOf(0, 4000, 2000, 4000)
             channel.setSound(
                 Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + applicationContext.packageName + "/" + R.raw.newrtc),
                 Notification.AUDIO_ATTRIBUTES_DEFAULT

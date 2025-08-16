@@ -19,3 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# 小米推送AAR版SDK混淆配置（按官方文档要求）
+-keep class com.chat.push.push.XiaoMiMessageReceiver {*;}

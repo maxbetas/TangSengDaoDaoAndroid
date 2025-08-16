@@ -31,7 +31,8 @@ android {
 dependencies {
     api project(':wkbase')
     implementation 'com.huawei.hms:push:6.1.0.300'
-    implementation files('libs/MiPush_SDK_Client_3_7_5.jar')
+    // 小米推送AAR版本SDK
+    implementation (name: 'MiPush_SDK_Client_6_0_1-C_3rd', ext: 'aar')
 
     //oppo
     implementation 'com.google.code.gson:gson:2.8.9'
