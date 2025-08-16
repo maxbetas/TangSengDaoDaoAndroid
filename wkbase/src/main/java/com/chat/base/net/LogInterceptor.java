@@ -51,32 +51,36 @@ public class LogInterceptor implements Interceptor {
                         Charset.defaultCharset() : 
                         type.charset(Charset.defaultCharset());
                     
+                    // 创建副本进行BOM检测，避免修改原始Buffer
+                    Buffer copyBuffer = source.clone();
+                    
                     // 手动实现BOM检测逻辑，保持功能完全等价
-                    if (source.size() >= 3) {
+                    if (copyBuffer.size() >= 3) {
                         // UTF-8 BOM: EF BB BF
-                        if (source.getByte(0) == (byte) 0xEF && 
-                            source.getByte(1) == (byte) 0xBB && 
-                            source.getByte(2) == (byte) 0xBF) {
+                        if (copyBuffer.getByte(0) == (byte) 0xEF && 
+                            copyBuffer.getByte(1) == (byte) 0xBB && 
+                            copyBuffer.getByte(2) == (byte) 0xBF) {
                             charset = Charset.forName("UTF-8");
-                            source.skip(3);
+                            copyBuffer.skip(3);
                         }
                         // UTF-16 BE BOM: FE FF
-                        else if (source.size() >= 2 && 
-                                 source.getByte(0) == (byte) 0xFE && 
-                                 source.getByte(1) == (byte) 0xFF) {
+                        else if (copyBuffer.size() >= 2 && 
+                                 copyBuffer.getByte(0) == (byte) 0xFE && 
+                                 copyBuffer.getByte(1) == (byte) 0xFF) {
                             charset = Charset.forName("UTF-16BE");
-                            source.skip(2);
+                            copyBuffer.skip(2);
                         }
                         // UTF-16 LE BOM: FF FE
-                        else if (source.size() >= 2 && 
-                                 source.getByte(0) == (byte) 0xFF && 
-                                 source.getByte(1) == (byte) 0xFE) {
+                        else if (copyBuffer.size() >= 2 && 
+                                 copyBuffer.getByte(0) == (byte) 0xFF && 
+                                 copyBuffer.getByte(1) == (byte) 0xFE) {
                             charset = Charset.forName("UTF-16LE");
-                            source.skip(2);
+                            copyBuffer.skip(2);
                         }
                     }
                     
-                    requestParams = source.readString(charset);
+                    // 从副本Buffer读取，保持原始数据完整
+                    requestParams = copyBuffer.readString(charset);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
