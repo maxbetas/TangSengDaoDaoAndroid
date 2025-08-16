@@ -276,16 +276,17 @@ public class WKPushApplication {
     private void getPushToken() {
         Context context = mContext != null ? mContext.get() : null;
         if (context == null) return;
-        // 优先使用厂商推送，确保推送的可靠性和稳定性
-        if (OsUtils.isEmui()) {
+        // 🏆 最佳实践：基于厂商品牌判断推送类型（大小写不敏感）
+        String manufacturer = Build.MANUFACTURER;
+        if ("HUAWEI".equalsIgnoreCase(manufacturer)) {
             new Thread(() -> getHuaWeiToken(context)).start();
-        } else if (OsUtils.isMiui()) {
+        } else if ("Xiaomi".equalsIgnoreCase(manufacturer)) {
             initXiaoMiPush(context);
-        } else if (OsUtils.isOppo()) {
+        } else if ("OPPO".equalsIgnoreCase(manufacturer)) {
             initOPPO();
-        } else if (OsUtils.isVivo()) {
+        } else if ("vivo".equalsIgnoreCase(manufacturer)) {
             initVIVO();
-        } else if (OsUtils.isHonor()) {
+        } else if ("HONOR".equalsIgnoreCase(manufacturer)) {
             initHonor();
         } else {
             // 仅在非厂商设备上使用Firebase作为备用推送

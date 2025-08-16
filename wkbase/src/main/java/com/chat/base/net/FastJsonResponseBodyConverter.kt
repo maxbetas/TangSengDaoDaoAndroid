@@ -1,5 +1,5 @@
 package com.chat.base.net
-import com.google.gson.Gson
+import com.alibaba.fastjson.JSON
 import okhttp3.ResponseBody
 import retrofit2.Converter
 import java.lang.reflect.Type
@@ -10,7 +10,7 @@ class FastJsonResponseBodyConverter<T>(
 
     override fun convert(value: ResponseBody): T? {
         return value.use {
-            Gson().fromJson(value.string(), type)
+            JSON.parseObject(value.string(), type)
         }
     }
 }

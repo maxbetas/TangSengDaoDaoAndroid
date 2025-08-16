@@ -12,9 +12,7 @@ import android.util.Log;
 
 import com.chat.base.utils.WKReader;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+// 🗑️ 已删除：不再需要IO相关导入，统一使用Build.MANUFACTURER
 import java.util.List;
 
 /**
@@ -32,12 +30,7 @@ public class OsUtils {
     private static final String ROM_QIKU = "QIKU";
     private static final String ROM_HONOR = "HONOR";
 
-    private static final String KEY_VERSION_MIUI = "ro.miui.ui.version.name";
-    private static final String KEY_VERSION_EMUI = "ro.build.version.emui";
-    private static final String KEY_VERSION_OPPO = "ro.build.version.opporom";
-    private static final String KEY_VERSION_SMARTISAN = "ro.smartisan.version";
-    private static final String KEY_VERSION_VIVO = "ro.vivo.os.version";
-    private static final String KEY_VERSION_HONOR = "ro.build.version.honor";
+    // 🗑️ 已删除：不再需要复杂的系统属性检测，统一使用厂商名映射
 
     private static String sName;
     private static String sVersion;
@@ -92,52 +85,41 @@ public class OsUtils {
         if (sName != null) {
             return sName.equals(rom);
         }
-
-        if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_MIUI))) {
-            sName = ROM_MIUI;
-        } else if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_EMUI))) {
-            sName = ROM_EMUI;
-        } else if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_OPPO))) {
-            sName = ROM_OPPO;
-        } else if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_VIVO))) {
-            sName = ROM_VIVO;
-        } else if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_SMARTISAN))) {
-            sName = ROM_SMARTISAN;
-        } else if (!TextUtils.isEmpty(sVersion = getProp(KEY_VERSION_HONOR))) {
-            sName = ROM_HONOR;
-        } else {
-            sVersion = Build.DISPLAY;
-            if (sVersion.toUpperCase().contains(ROM_FLYME)) {
-                sName = ROM_FLYME;
-            } else {
-                sVersion = Build.UNKNOWN;
-                sName = Build.MANUFACTURER.toUpperCase();
-            }
-        }
+        
+        // 🏆 最佳实践：直接基于厂商名映射（大小写不敏感）
+        String manufacturer = Build.MANUFACTURER;
+        sName = mapManufacturerToRom(manufacturer);
+        sVersion = Build.DISPLAY; // 保留版本信息用于调试
+        
         return sName.equals(rom);
     }
 
-    private static String getProp(String name) {
-        String line;
-        BufferedReader input = null;
-        try {
-            Process p = Runtime.getRuntime().exec("getprop " + name);
-            input = new BufferedReader(new InputStreamReader(p.getInputStream()), 1024);
-            line = input.readLine();
-            input.close();
-        } catch (IOException ex) {
-            return null;
-        } finally {
-            if (input != null) {
-                try {
-                    input.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return line;
+    /**
+     * 🏆 最佳实践：厂商映射（大小写不敏感，健壮性最强）
+     * 
+     * 技术要点：
+     * 1. 使用equalsIgnoreCase()避免大小写问题（华为可能返回"HUAWEI"或"Huawei"）
+     * 2. 支持所有新老系统，无需复杂的系统属性检测
+     * 3. 基于Build.MANUFACTURER永远稳定，厂商品牌不会变
+     * 
+     * @param manufacturer 厂商名（Build.MANUFACTURER的值）
+     * @return 对应的ROM名（如MIUI、EMUI等）
+     */
+    private static String mapManufacturerToRom(String manufacturer) {
+        // 🔧 使用equalsIgnoreCase确保大小写兼容性（最佳实践）
+        if ("Xiaomi".equalsIgnoreCase(manufacturer)) return ROM_MIUI;      // 小米全系列
+        if ("HUAWEI".equalsIgnoreCase(manufacturer)) return ROM_EMUI;      // 华为全系列
+        if ("OPPO".equalsIgnoreCase(manufacturer)) return ROM_OPPO;        // OPPO全系列
+        if ("vivo".equalsIgnoreCase(manufacturer)) return ROM_VIVO;        // Vivo全系列
+        if ("HONOR".equalsIgnoreCase(manufacturer)) return ROM_HONOR;      // 荣耀全系列
+        if ("Meizu".equalsIgnoreCase(manufacturer)) return ROM_FLYME;      // 魅族全系列
+        if ("smartisan".equalsIgnoreCase(manufacturer)) return ROM_SMARTISAN; // 锤子
+        if ("360".equalsIgnoreCase(manufacturer)) return ROM_QIKU;         // 360手机
+        
+        return manufacturer.toUpperCase(); // 未知厂商统一大写处理
     }
+
+    // 🗑️ 已删除：getProp()方法不再需要，统一使用Build.MANUFACTURER
 
     static void setBadge(Context context, int number) {
         if (isEmui()) {
