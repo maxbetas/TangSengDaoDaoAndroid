@@ -107,6 +107,7 @@ import com.chat.uikit.search.AddFriendsActivity;
 import com.chat.uikit.setting.MsgNoticesSettingActivity;
 import com.chat.uikit.setting.SettingActivity;
 import com.chat.uikit.user.UserDetailActivity;
+import com.chat.uikit.utils.PushNotificationHelper;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.xinbida.wukongim.WKIM;
 import com.xinbida.wukongim.entity.WKChannel;
@@ -528,6 +529,20 @@ public class WKUIKitApplication {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     WKBaseApplication.getInstance().getContext().startActivity(intent);
                 });
+            }
+            return null;
+        });
+
+        // 注册推送通知显示方法，供其他模块调用
+        EndpointManager.getInstance().setMethod("show_push_notification", object -> {
+            if (object instanceof String[] params) {
+                if (params.length >= 2) {
+                    String title = params[0];
+                    String content = params[1];
+                    // 基于时间戳生成唯一通知ID，确保每条推送消息都能独立显示
+                    int notificationId = (int) (System.currentTimeMillis() & 0xFFFFFFF);
+                    PushNotificationHelper.INSTANCE.notifyMessage(mContext.get(), notificationId, title, content);
+                }
             }
             return null;
         });

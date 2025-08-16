@@ -4,6 +4,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import com.chat.push.WKPushApplication;
 import com.chat.push.service.PushModel;
+import com.chat.push.service.PushMessageHandler;
 import com.hihonor.push.sdk.HonorMessageService;
 import com.hihonor.push.sdk.HonorPushDataMsg;
 
@@ -26,6 +27,12 @@ public class HonorPushMessageServiceImpl extends HonorMessageService {
         super.onMessageReceived(message);
         if (message != null) {
             Log.e("收到荣耀推送消息", message.getData());
+            
+            // 统一处理推送消息
+            String content = message.getData();
+            if (!TextUtils.isEmpty(content)) {
+                PushMessageHandler.getInstance().handlePushMessage("荣耀推送", content);
+            }
         }
     }
 

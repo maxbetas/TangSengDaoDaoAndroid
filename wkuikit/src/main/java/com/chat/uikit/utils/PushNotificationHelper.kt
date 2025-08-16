@@ -19,6 +19,7 @@ object PushNotificationHelper {
         channelId = WKConstants.newMsgChannelID,
         name = WKBaseApplication.getInstance().context.getString(R.string.new_msg_notification),
         importance = NotificationManager.IMPORTANCE_DEFAULT,
+        lockScreenVisibility = NotificationCompat.VISIBILITY_PUBLIC,
         sound = Uri.parse("android.resource://" + WKBaseApplication.getInstance().context.packageName + "/" + R.raw.newmsg)
     )
 
@@ -36,7 +37,8 @@ object PushNotificationHelper {
     private val NOTICE = NotificationCompatUtil.Channel(
         channelId = WKConstants.newMsgChannelID,
         name = WKBaseApplication.getInstance().context.getString(R.string.new_msg_notification),
-        importance = NotificationManager.IMPORTANCE_LOW
+        importance = NotificationManager.IMPORTANCE_LOW,
+        lockScreenVisibility = NotificationCompat.VISIBILITY_PUBLIC
     )
 
     /** 通知渠道-音视频通话(重要性级别-紧急：发出提示音，并以浮动通知的形式显示 & 锁屏显示 & 振动4s停2s再振动4s ) */

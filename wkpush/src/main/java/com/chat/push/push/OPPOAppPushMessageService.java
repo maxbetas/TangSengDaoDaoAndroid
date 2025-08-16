@@ -1,9 +1,12 @@
 package com.chat.push.push;
 
 import android.content.Context;
+import android.text.TextUtils;
+import android.util.Log;
 
 import com.heytap.msp.push.mode.DataMessage;
 import com.heytap.msp.push.service.DataMessageCallbackService;
+import com.chat.push.service.PushMessageHandler;
 
 public class OPPOAppPushMessageService extends DataMessageCallbackService {
 
@@ -16,8 +19,14 @@ public class OPPOAppPushMessageService extends DataMessageCallbackService {
     @Override
     public void processMessage(Context context, DataMessage message) {
         super.processMessage(context, message);
-//        TestModeUtil.addLogString(PushMessageService.class.getSimpleName(), "Receive SptDataMessage:" + message.toString());
-//        NotificationUtil.showNotification(context,message.getTitle(),message.getContent(), message.getNotifyID(), ConfigManager.getInstant().isRedBadge());
+        Log.e("收到OPPO App推送消息", message.toString());
+        
+        // 统一处理推送消息
+        String title = message.getTitle();
+        String content = message.getContent();
+        if (!TextUtils.isEmpty(content)) {
+            PushMessageHandler.getInstance().handlePushMessage("OPPO App推送", title, content);
+        }
     }
 
 }

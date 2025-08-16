@@ -1,9 +1,9 @@
 <libraries>
   <library
       name=":@@:wkuikit::release"
-      jars="/Users/echo/.gradle/caches/8.10.2/transforms/e7afdd3f4e1577bd54db7be51fe860e2/transformed/out/jars/classes.jar:/Users/echo/.gradle/caches/8.10.2/transforms/e7afdd3f4e1577bd54db7be51fe860e2/transformed/out/jars/libs/R.jar"
+      jars="/Users/echo/.gradle/caches/8.10.2/transforms/08ac0d57746dbbb9c319525a30285228/transformed/out/jars/classes.jar:/Users/echo/.gradle/caches/8.10.2/transforms/08ac0d57746dbbb9c319525a30285228/transformed/out/jars/libs/R.jar"
       resolved="TsddClient:wkuikit:unspecified"
-      folder="/Users/echo/.gradle/caches/8.10.2/transforms/e7afdd3f4e1577bd54db7be51fe860e2/transformed/out"
+      folder="/Users/echo/.gradle/caches/8.10.2/transforms/08ac0d57746dbbb9c319525a30285228/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

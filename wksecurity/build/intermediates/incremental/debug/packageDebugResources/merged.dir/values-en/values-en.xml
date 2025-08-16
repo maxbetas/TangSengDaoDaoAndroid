@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="confirm_destroy">Confirm delete</string>
+    <string name="destroy_account_desc">Delete your account with SMS verification. All data will be permanently removed. To use again, please register a new account.</string>
+    <string name="destroy_account_title">Delete Account</string>
+    <string name="input_code_hint">Enter SMS code</string>
+    <string name="security_and_privacy">Security &amp; Privacy</string>
+    <string name="send_sms">Send code</string>
+</resources>

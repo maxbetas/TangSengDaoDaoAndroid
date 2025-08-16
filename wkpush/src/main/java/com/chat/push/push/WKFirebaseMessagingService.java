@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 
 import com.chat.push.WKPushApplication;
 import com.chat.push.service.PushModel;
+import com.chat.push.service.PushMessageHandler;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -27,6 +28,28 @@ public class WKFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(@NonNull RemoteMessage msg) {
         super.onMessageReceived(msg);
         Log.e("收到Firebase推送消息", msg.getFrom());
+        
+        // 统一处理推送消息
+        String title = null;
+        String content = null;
+        
+        // 优先处理notification类型消息
+        if (msg.getNotification() != null) {
+            title = msg.getNotification().getTitle();
+            content = msg.getNotification().getBody();
+        }
+        // 如果没有notification，尝试从data中获取
+        else if (msg.getData() != null && !msg.getData().isEmpty()) {
+            title = msg.getData().get("title");
+            content = msg.getData().get("body");
+            if (TextUtils.isEmpty(content)) {
+                content = msg.getData().get("message");
+            }
+        }
+        
+        if (!TextUtils.isEmpty(content)) {
+            PushMessageHandler.getInstance().handlePushMessage("Firebase推送", title, content);
+        }
     }
 
 }

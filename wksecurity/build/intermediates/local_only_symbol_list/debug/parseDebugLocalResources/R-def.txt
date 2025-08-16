@@ -1,0 +1,18 @@
+R_DEF: Internal format may change without notice
+local
+drawable ic_privacy_shield
+id codeEt
+id confirmBtn
+id descTv
+id recyclerView
+id sendSmsBtn
+id titleTv
+layout act_destroy_account
+layout act_security_home
+layout item_security_menu_layout
+string confirm_destroy
+string destroy_account_desc
+string destroy_account_title
+string input_code_hint
+string security_and_privacy
+string send_sms

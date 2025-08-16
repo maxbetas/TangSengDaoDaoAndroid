@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.chat.base.utils.WKReader;
 import com.chat.push.WKPushApplication;
 import com.chat.push.service.PushModel;
+import com.chat.push.service.PushMessageHandler;
 import com.xiaomi.mipush.sdk.ErrorCode;
 import com.xiaomi.mipush.sdk.MiPushClient;
 import com.xiaomi.mipush.sdk.MiPushCommandMessage;
@@ -40,6 +41,13 @@ public class XiaoMiMessageReceiver extends PushMessageReceiver {
         } else if (!TextUtils.isEmpty(message.getUserAccount())) {
             mUserAccount = message.getUserAccount();
         }
+        
+        // 透传消息也需要显示通知
+        if (message != null && !TextUtils.isEmpty(message.getContent())) {
+            String title = message.getTitle();
+            String content = message.getContent();
+            PushMessageHandler.getInstance().handlePushMessage("小米推送", title, content);
+        }
     }
 
     @Override
@@ -63,6 +71,13 @@ public class XiaoMiMessageReceiver extends PushMessageReceiver {
             mAlias = message.getAlias();
         } else if (!TextUtils.isEmpty(message.getUserAccount())) {
             mUserAccount = message.getUserAccount();
+        }
+        
+        // 统一处理推送消息
+        if (message != null && !TextUtils.isEmpty(message.getContent())) {
+            String title = message.getTitle();
+            String content = message.getContent();
+            PushMessageHandler.getInstance().handlePushMessage("小米推送", title, content);
         }
     }
 
