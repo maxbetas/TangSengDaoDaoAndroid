@@ -56,5 +56,5 @@ android {
 dependencies {
    implementation project(':wkbase')
     implementation files('libs/tinypinyin-2.0.3.jar')
-    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.core:core-ktx:1.13.1'
 }

@@ -41,7 +41,7 @@ allprojects {
 }
 
 project.ext {
-    minSdkVersion = 21
+    minSdkVersion = 26  // 升级以支持FastJSON2和Firebase最新版本
     targetSdkVersion = 34
     compileSdkVersion = 34
     buildToolsVersion = "34.0.0"
