@@ -183,18 +183,18 @@ internal class Downloader private constructor() {
 
                 override fun onResponse(call: Call, response: Response) {
                     if (response.isSuccessful && response.code == 200) {
-                        // 使用?.let来安全处理可能为null的body，避免"condition always false"警告
-                        response.body?.let { body ->
-                            mTask.contentSize = body.contentLength()
-                            mTask.inputStream = body.byteStream()
-                            if (mTask.fileOutputStream == null) {
-                                mTask.fileOutputStream = FileOutputStream(mTask.file)
-                            }
-                            calculate(mTask)
-                        } ?: run {
-                            // 处理body为null的异常情况（虽然在成功响应中极少发生）
+                        val body = response.body
+                        @Suppress("SENSELESS_COMPARISON") // 抑制"condition always false"警告
+                        if (body == null) {
                             mTask.errorMsg = response.message
+                            return
                         }
+                        mTask.contentSize = body.contentLength()
+                        mTask.inputStream = body.byteStream()
+                        if (mTask.fileOutputStream == null) {
+                            mTask.fileOutputStream = FileOutputStream(mTask.file)
+                        }
+                        calculate(mTask)
                     } else {
                         Log.e(TAG, response.message)
                     }
