@@ -218,7 +218,7 @@ public class MsgModel extends WKBaseModel {
     public void clearUnread(String channelId, byte channelType, int unreadCount, ICommonListener iCommonListener) {
         if (unreadCount < 0) unreadCount = 0;
         WKIM.getInstance().getConversationManager().updateRedDot(channelId, channelType, unreadCount);
-        com.alibaba.fastjson.JSONObject jsonObject = new com.alibaba.fastjson.JSONObject();
+        com.alibaba.fastjson2.JSONObject jsonObject = new com.alibaba.fastjson2.JSONObject();
         jsonObject.put("channel_id", channelId);
         jsonObject.put("channel_type", channelType);
         jsonObject.put("unread", unreadCount);

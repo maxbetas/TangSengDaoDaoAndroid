@@ -92,7 +92,7 @@
 -keep class * implements java.io.Serializable { *; }
 -keepattributes *Annotation
 -keep class * implements java.lang.annotation.Annotation { *; }
--keep class com.alibaba.fastjson.* { *; }
+-keep class com.alibaba.fastjson2.** { *; }
 -keep class com.ling.fast.bean** { *; }
 #PictureSelector 2.0
 -keep class com.luck.picture.lib.** { *; }
