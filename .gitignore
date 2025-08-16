@@ -9,14 +9,47 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
-/build
-/wkbase/build
-/wklogin/build
-/wkscan/build
-/wkpush/build
-/wkuikit/build
+
+# Build directories (使用通配符覆盖所有模块)
+**/build/
+build/
+
+# Captures
 /captures
 .externalNativeBuild
 .cxx
+
+# Local configuration file
 local.properties
+
+# IDE
 /.vscode
+
+# Generated files
+*.ap_
+*.dex
+*.class
+
+# Keystore files
+# Uncomment the following lines if you do not want to check your keystore files in.
+#*.jks
+#*.keystore
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+.cxx/
+
+# Google Services (e.g. APIs or Firebase)
+# google-services.json
+
+# Freeline
+freeline.py
+freeline/
+freeline_project_description.json
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
