@@ -661,11 +661,11 @@ public class WKIMUtils {
 //            url = WKApiConfig.getShowAvatar(channel.channelID, channel.channelType);
 //        }
 //        String finalShowContent = showContent;
-//        if (isVibrate) {
-//            PushNotificationHelper.INSTANCE.notifyMention(WKUIKitApplication.getInstance().getContext(), 1, showTitle, showContent);
-//        } else {
-        PushNotificationHelper.INSTANCE.notifyMessage(WKUIKitApplication.getInstance().getContext(), 1, showTitle, showContent);
-//        }
+        if (isVibrate) {
+            PushNotificationHelper.INSTANCE.notifyMention(WKUIKitApplication.getInstance().getContext(), 1, showTitle, showContent);
+        } else {
+            PushNotificationHelper.INSTANCE.notifyMessage(WKUIKitApplication.getInstance().getContext(), 1, showTitle, showContent);
+        }
 //        showNotice(showTitle, finalShowContent, null, isVibrate);
 //        getChannelLogo(url, activity, logo -> showNotice(showTitle, finalShowContent, logo, isVibrate));
     }

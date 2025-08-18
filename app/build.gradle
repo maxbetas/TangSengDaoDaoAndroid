@@ -5,6 +5,20 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+def getVersionCode() {
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-list', '--count', 'HEAD'
+            standardOutput = stdout
+        }
+        return Integer.parseInt(stdout.toString().trim())
+    } catch (Exception e) {
+        // 如果git命令失败，返回默认值
+        return 1
+    }
+}
+
 android {
     signingConfigs {
         debug {
@@ -30,7 +44,7 @@ android {
         applicationId "com.xingxun.xingxunliao"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
+        versionCode getVersionCode()
         versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

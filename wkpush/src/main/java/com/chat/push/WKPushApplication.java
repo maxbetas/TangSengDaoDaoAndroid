@@ -101,6 +101,7 @@ public class WKPushApplication {
     }
 
     private void initXiaoMiPush(Context context) {
+        Log.d("WKPush", "开始初始化小米推送，AppID: " + PushKeys.xiaoMiAppID);
         MiPushClient.registerPush(context, PushKeys.xiaoMiAppID, PushKeys.xiaoMiAppKey);
     }
 
@@ -225,18 +226,28 @@ public class WKPushApplication {
                 PushModel.getInstance().registerDeviceToken(token, pushBundleID,"FIREBASE");
             });
         }else {
+            Log.d("WKPush", "Google Play Services不可用，使用厂商推送");
             if (!TextUtils.isEmpty(WKConfig.getInstance().getUid())) {
                 if (OsUtils.isEmui()) {
+                    Log.d("WKPush", "检测到华为设备，初始化华为推送");
                     new Thread(() -> getHuaWeiToken(mContext.get())).start();
                 } else if (OsUtils.isMiui()) {
+                    Log.d("WKPush", "检测到小米设备，初始化小米推送");
                     initXiaoMiPush(mContext.get());
                 } else if (OsUtils.isOppo()) {
+                    Log.d("WKPush", "检测到OPPO设备，初始化OPPO推送");
                     initOPPO();
                 } else if (OsUtils.isVivo()) {
+                    Log.d("WKPush", "检测到VIVO设备，初始化VIVO推送");
                     initVIVO();
                 } else if (OsUtils.isHonor()) {
+                    Log.d("WKPush", "检测到荣耀设备，初始化荣耀推送");
                     initHonor();
+                } else {
+                    Log.d("WKPush", "未识别的设备类型，设备厂商: " + android.os.Build.MANUFACTURER);
                 }
+            } else {
+                Log.d("WKPush", "用户未登录，跳过推送初始化");
             }
         }
 //        GoogleApiAvailability.getInstance().makeGooglePlayServicesAvailable(mContext.get()).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -270,7 +281,7 @@ public class WKPushApplication {
             String channelId = WKConstants.newMsgChannelID;
             String channelName = "Default_Channel";
             String channelDescription = "this is default channel!";
-            NotificationChannel mNotificationChannel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel mNotificationChannel = new NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_HIGH);
             mNotificationChannel.setDescription(channelDescription);
             ((NotificationManager) context.getSystemService(Activity.NOTIFICATION_SERVICE)).createNotificationChannel(mNotificationChannel);
         }

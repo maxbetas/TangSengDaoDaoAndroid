@@ -32,6 +32,7 @@ public class XiaoMiMessageReceiver extends PushMessageReceiver {
 
     @Override
     public void onReceivePassThroughMessage(Context context, MiPushMessage message) {
+        android.util.Log.d("XiaoMiPush", "收到透传消息: " + message.getContent());
         mMessage = message.getContent();
         if (!TextUtils.isEmpty(message.getTopic())) {
             mTopic = message.getTopic();
@@ -44,6 +45,7 @@ public class XiaoMiMessageReceiver extends PushMessageReceiver {
 
     @Override
     public void onNotificationMessageClicked(Context context, MiPushMessage message) {
+        android.util.Log.d("XiaoMiPush", "通知被点击: " + message.getContent());
         mMessage = message.getContent();
         if (!TextUtils.isEmpty(message.getTopic())) {
             mTopic = message.getTopic();
@@ -56,6 +58,7 @@ public class XiaoMiMessageReceiver extends PushMessageReceiver {
 
     @Override
     public void onNotificationMessageArrived(Context context, MiPushMessage message) {
+        android.util.Log.d("XiaoMiPush", "通知消息到达: " + message.getContent());
         mMessage = message.getContent();
         if (!TextUtils.isEmpty(message.getTopic())) {
             mTopic = message.getTopic();
@@ -75,10 +78,14 @@ public class XiaoMiMessageReceiver extends PushMessageReceiver {
         if (MiPushClient.COMMAND_REGISTER.equals(command)) {
             if (message.getResultCode() == ErrorCode.SUCCESS) {
                 mRegId = cmdArg1;
+                android.util.Log.d("XiaoMiPush", "小米推送注册成功，RegId: " + mRegId);
                 //注册小米推送token
                 if (!TextUtils.isEmpty(mRegId) && !TextUtils.isEmpty(WKPushApplication.getInstance().pushBundleID)) {
+                    android.util.Log.d("XiaoMiPush", "正在向服务器注册推送Token...");
                     PushModel.getInstance().registerDeviceToken(mRegId, WKPushApplication.getInstance().pushBundleID,"");
                 }
+            } else {
+                android.util.Log.e("XiaoMiPush", "小米推送注册失败，错误码: " + message.getResultCode() + ", 原因: " + message.getReason());
             }
         } else if (MiPushClient.COMMAND_SET_ALIAS.equals(command)) {
             if (message.getResultCode() == ErrorCode.SUCCESS) {
@@ -113,10 +120,20 @@ public class XiaoMiMessageReceiver extends PushMessageReceiver {
         if (MiPushClient.COMMAND_REGISTER.equals(command)) {
             if (message.getResultCode() == ErrorCode.SUCCESS) {
                 mRegId = cmdArg1;
+                android.util.Log.d("XiaoMiPush", "收到注册结果，RegId: " + mRegId);
                 if (!TextUtils.isEmpty(mRegId) && !TextUtils.isEmpty(WKPushApplication.getInstance().pushBundleID)) {
                     PushModel.getInstance().registerDeviceToken(mRegId, WKPushApplication.getInstance().pushBundleID,"");
                 }
+            } else {
+                android.util.Log.e("XiaoMiPush", "注册结果失败，错误码: " + message.getResultCode());
             }
         }
+    }
+
+    @Override
+    public void onRequirePermissions(Context context, String[] permissions) {
+        // 当所需要的权限未获取到的时候会回调该接口
+        // 可以在这里提示用户授权相关权限
+        android.util.Log.d("XiaoMiPush", "需要权限: " + java.util.Arrays.toString(permissions));
     }
 }

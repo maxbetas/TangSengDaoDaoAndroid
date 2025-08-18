@@ -18,7 +18,7 @@ object PushNotificationHelper {
     private val MESSAGE = NotificationCompatUtil.Channel(
         channelId = WKConstants.newMsgChannelID,
         name = WKBaseApplication.getInstance().context.getString(R.string.new_msg_notification),
-        importance = NotificationManager.IMPORTANCE_DEFAULT,
+        importance = NotificationManager.IMPORTANCE_HIGH,
         sound = Uri.parse("android.resource://" + WKBaseApplication.getInstance().context.packageName + "/" + R.raw.newmsg)
     )
 

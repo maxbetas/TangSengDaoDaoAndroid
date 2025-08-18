@@ -223,7 +223,7 @@ class TSApplication : MultiDexApplication() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name: CharSequence = applicationContext.getString(R.string.new_msg_notification)
             val description = applicationContext.getString(R.string.new_msg_notification_desc)
-            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val importance = NotificationManager.IMPORTANCE_HIGH
             val channel = NotificationChannel(WKConstants.newMsgChannelID, name, importance)
             channel.description = description
             channel.enableVibration(true) //是否有震动
