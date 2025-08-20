@@ -3,9 +3,6 @@
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
-    <!-- vivo推送权限 -->
-    <uses-permission android:name="com.vivo.pushservice.permission.RECEIVE" />
-    <uses-permission android:name="com.push.permission.UPSTAGESERVICE" />
     <!-- 荣耀推送权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
