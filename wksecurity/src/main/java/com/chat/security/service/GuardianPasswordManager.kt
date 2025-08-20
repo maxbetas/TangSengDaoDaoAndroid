@@ -1,162 +1,151 @@
 package com.chat.security.service
 
 import android.content.Context
-import android.util.Base64
+import android.text.TextUtils
 import com.chat.base.config.WKSharedPreferencesUtil
-import java.security.MessageDigest
-import java.security.SecureRandom
-import javax.crypto.Cipher
-import javax.crypto.KeyGenerator
-import javax.crypto.SecretKey
-import javax.crypto.spec.SecretKeySpec
+import com.chat.base.utils.WKCommonUtils
+import com.chat.base.utils.WKDialogUtils
+import com.chat.base.utils.WKToastUtils
+import com.chat.base.views.pwdview.NumPwdDialog
+import com.chat.security.R
 
 /**
  * 监护人密码管理器
- * 负责密码的安全存储、验证和管理
+ * 负责未成年模式的密码设置、验证和管理
  */
 class GuardianPasswordManager private constructor() {
-
+    
+    private val GUARDIAN_PWD_KEY = "guardian_password_hash"
+    private val PWD_SETUP_COMPLETED_KEY = "guardian_pwd_setup_completed"
+    
     companion object {
         private val HOLDER = GuardianPasswordManager()
         fun getInstance(): GuardianPasswordManager = HOLDER
-        
-        private const val GUARDIAN_PASSWORD_KEY = "guardian_password_hash"
-        private const val GUARDIAN_SALT_KEY = "guardian_password_salt"
-        private const val PASSWORD_ATTEMPTS_KEY = "password_attempts"
-        private const val LAST_ATTEMPT_TIME_KEY = "last_attempt_time"
-        private const val MAX_ATTEMPTS = 5
-        private const val LOCKOUT_TIME = 30 * 60 * 1000L // 30分钟锁定时间
     }
-
+    
     /**
      * 检查是否已设置监护人密码
      */
-    fun hasGuardianPassword(): Boolean {
-        return WKSharedPreferencesUtil.getInstance().getString(GUARDIAN_PASSWORD_KEY, "").isNotEmpty()
+    fun isPasswordSet(): Boolean {
+        return WKSharedPreferencesUtil.getInstance().getBoolean(PWD_SETUP_COMPLETED_KEY, false)
     }
-
+    
     /**
-     * 设置监护人密码
+     * 首次设置密码流程
      */
-    fun setGuardianPassword(password: String): Boolean {
-        return try {
-            val salt = generateSalt()
-            val hashedPassword = hashPassword(password, salt)
+    fun setupPassword(context: Context, onSuccess: () -> Unit, onCancel: () -> Unit) {
+        showPasswordSetupDialog(context, onSuccess, onCancel)
+    }
+    
+    /**
+     * 验证密码
+     */
+    fun verifyPassword(context: Context, title: String, onSuccess: () -> Unit, onCancel: () -> Unit) {
+        if (!isPasswordSet()) {
+            // 如果没有设置密码，先设置
+            setupPassword(context, onSuccess, onCancel)
+            return
+        }
+        
+        NumPwdDialog.getInstance().showNumPwdDialog(
+            context,
+            title,
+            context.getString(R.string.guardian_pwd_verify_desc),
+            context.getString(R.string.guardian_pwd_remark),
+            object : NumPwdDialog.IPwdInputResult {
+                override fun onResult(numPwd: String) {
+                    if (verifyPasswordHash(numPwd)) {
+                        onSuccess.invoke()
+                    } else {
+                        WKToastUtils.getInstance().showToastNormal(context.getString(R.string.guardian_pwd_error))
+                        onCancel.invoke()
+                    }
+                }
+                
+                override fun forgetPwd() {
+                    showForgetPasswordDialog(context)
+                }
+            }
+        )
+    }
+    
+    /**
+     * 显示密码设置对话框
+     */
+    private fun showPasswordSetupDialog(context: Context, onSuccess: () -> Unit, onCancel: () -> Unit) {
+        WKDialogUtils.getInstance().showInputDialog(
+            context,
+            context.getString(R.string.guardian_pwd_setup_title),
+            context.getString(R.string.guardian_pwd_setup_desc),
+            "",
+            context.getString(R.string.guardian_pwd_setup_hint),
+            6
+        ) { firstPwd ->
+            if (TextUtils.isEmpty(firstPwd) || firstPwd.length != 6) {
+                WKToastUtils.getInstance().showToastNormal(context.getString(R.string.guardian_pwd_length_error))
+                onCancel.invoke()
+                return@showInputDialog
+            }
             
-            WKSharedPreferencesUtil.getInstance().putString(GUARDIAN_PASSWORD_KEY, hashedPassword)
-            WKSharedPreferencesUtil.getInstance().putString(GUARDIAN_SALT_KEY, salt)
-            resetAttempts() // 重置尝试次数
-            true
-        } catch (e: Exception) {
-            false
+            // 确认密码
+            WKDialogUtils.getInstance().showInputDialog(
+                context,
+                context.getString(R.string.guardian_pwd_confirm_title),
+                context.getString(R.string.guardian_pwd_confirm_desc),
+                "",
+                context.getString(R.string.guardian_pwd_setup_hint),
+                6
+            ) { confirmPwd ->
+                if (firstPwd == confirmPwd) {
+                    // 密码一致，保存
+                    savePassword(firstPwd)
+                    WKToastUtils.getInstance().showToastNormal(context.getString(R.string.guardian_pwd_setup_success))
+                    onSuccess.invoke()
+                } else {
+                    WKToastUtils.getInstance().showToastNormal(context.getString(R.string.guardian_pwd_not_match))
+                    onCancel.invoke()
+                }
+            }
         }
     }
-
+    
     /**
-     * 验证监护人密码
+     * 显示忘记密码对话框
      */
-    fun verifyGuardianPassword(password: String): Boolean {
-        if (isLockedOut()) {
-            return false
+    private fun showForgetPasswordDialog(context: Context) {
+        WKDialogUtils.getInstance().showSingleBtnDialog(
+            context,
+            context.getString(R.string.guardian_pwd_forget_title),
+            context.getString(R.string.guardian_pwd_forget_desc),
+context.getString(com.chat.base.R.string.sure)
+        ) {
+            // 仅提示用户联系客服，不提供重置功能
         }
-
-        val storedHash = WKSharedPreferencesUtil.getInstance().getString(GUARDIAN_PASSWORD_KEY, "")
-        val salt = WKSharedPreferencesUtil.getInstance().getString(GUARDIAN_SALT_KEY, "")
-        
-        if (storedHash.isEmpty() || salt.isEmpty()) {
-            return false
-        }
-
-        val inputHash = hashPassword(password, salt)
-        val isValid = storedHash == inputHash
-        
-        if (isValid) {
-            resetAttempts()
-        } else {
-            incrementAttempts()
-        }
-        
-        return isValid
     }
-
+    
     /**
-     * 检查是否被锁定
+     * 保存密码（加密存储）
      */
-    fun isLockedOut(): Boolean {
-        val attempts = WKSharedPreferencesUtil.getInstance().getInt(PASSWORD_ATTEMPTS_KEY, 0)
-        val lastAttemptTime = WKSharedPreferencesUtil.getInstance().getLong(LAST_ATTEMPT_TIME_KEY, 0)
-        
-        if (attempts >= MAX_ATTEMPTS) {
-            val currentTime = System.currentTimeMillis()
-            return currentTime - lastAttemptTime < LOCKOUT_TIME
-        }
-        return false
+    private fun savePassword(password: String) {
+        val hashedPwd = WKCommonUtils.digest(password)
+        WKSharedPreferencesUtil.getInstance().putSP(GUARDIAN_PWD_KEY, hashedPwd)
+        WKSharedPreferencesUtil.getInstance().putBoolean(PWD_SETUP_COMPLETED_KEY, true)
     }
-
+    
     /**
-     * 获取剩余锁定时间（分钟）
+     * 验证密码哈希
      */
-    fun getRemainingLockoutTime(): Int {
-        if (!isLockedOut()) return 0
-        
-        val lastAttemptTime = WKSharedPreferencesUtil.getInstance().getLong(LAST_ATTEMPT_TIME_KEY, 0)
-        val currentTime = System.currentTimeMillis()
-        val remainingTime = LOCKOUT_TIME - (currentTime - lastAttemptTime)
-        
-        return (remainingTime / (60 * 1000)).toInt() + 1
+    private fun verifyPasswordHash(password: String): Boolean {
+        val savedHash = WKSharedPreferencesUtil.getInstance().getSP(GUARDIAN_PWD_KEY)
+        val inputHash = WKCommonUtils.digest(password)
+        return savedHash == inputHash
     }
-
+    
     /**
-     * 获取剩余尝试次数
+     * 重置密码（清除所有相关数据）
      */
-    fun getRemainingAttempts(): Int {
-        val attempts = WKSharedPreferencesUtil.getInstance().getInt(PASSWORD_ATTEMPTS_KEY, 0)
-        return maxOf(0, MAX_ATTEMPTS - attempts)
-    }
-
-    /**
-     * 重置监护人密码（用于忘记密码的情况）
-     */
-    fun resetGuardianPassword() {
-        WKSharedPreferencesUtil.getInstance().putString(GUARDIAN_PASSWORD_KEY, "")
-        WKSharedPreferencesUtil.getInstance().putString(GUARDIAN_SALT_KEY, "")
-        resetAttempts()
-    }
-
-    /**
-     * 生成随机盐值
-     */
-    private fun generateSalt(): String {
-        val random = SecureRandom()
-        val salt = ByteArray(16)
-        random.nextBytes(salt)
-        return Base64.encodeToString(salt, Base64.DEFAULT)
-    }
-
-    /**
-     * 使用盐值哈希密码
-     */
-    private fun hashPassword(password: String, salt: String): String {
-        val md = MessageDigest.getInstance("SHA-256")
-        md.update(salt.toByteArray())
-        val hashedBytes = md.digest(password.toByteArray())
-        return Base64.encodeToString(hashedBytes, Base64.DEFAULT)
-    }
-
-    /**
-     * 重置尝试次数
-     */
-    private fun resetAttempts() {
-        WKSharedPreferencesUtil.getInstance().putInt(PASSWORD_ATTEMPTS_KEY, 0)
-        WKSharedPreferencesUtil.getInstance().putLong(LAST_ATTEMPT_TIME_KEY, 0)
-    }
-
-    /**
-     * 增加尝试次数
-     */
-    private fun incrementAttempts() {
-        val currentAttempts = WKSharedPreferencesUtil.getInstance().getInt(PASSWORD_ATTEMPTS_KEY, 0)
-        WKSharedPreferencesUtil.getInstance().putInt(PASSWORD_ATTEMPTS_KEY, currentAttempts + 1)
-        WKSharedPreferencesUtil.getInstance().putLong(LAST_ATTEMPT_TIME_KEY, System.currentTimeMillis())
+    fun resetPassword() {
+        WKSharedPreferencesUtil.getInstance().putSP(GUARDIAN_PWD_KEY, "")
+        WKSharedPreferencesUtil.getInstance().putBoolean(PWD_SETUP_COMPLETED_KEY, false)
     }
 }

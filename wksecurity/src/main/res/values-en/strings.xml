@@ -18,6 +18,21 @@
     <string name="minor_mode_status_on">Enabled</string>
     <string name="minor_mode_status_off">Disabled</string>
     <string name="minor_mode_filter_tip">When Minor Mode is enabled, sensitive words will be strictly filtered</string>
+    
+    <!-- Guardian password related -->
+    <string name="guardian_pwd_setup_title">Setup Guardian Password</string>
+    <string name="guardian_pwd_setup_desc">To protect minors, please set a 6-digit password</string>
+    <string name="guardian_pwd_setup_hint">Enter 6-digit password</string>
+    <string name="guardian_pwd_confirm_title">Confirm Password</string>
+    <string name="guardian_pwd_confirm_desc">Please enter the password again to confirm</string>
+    <string name="guardian_pwd_verify_desc">Enter guardian password to continue</string>
+    <string name="guardian_pwd_remark">Guardian password protects minor mode settings</string>
+    <string name="guardian_pwd_error">Incorrect password, please try again</string>
+    <string name="guardian_pwd_length_error">Password must be 6 digits</string>
+    <string name="guardian_pwd_not_match">Passwords do not match</string>
+    <string name="guardian_pwd_setup_success">Guardian password set successfully</string>
+    <string name="guardian_pwd_forget_title">Forgot Password</string>
+    <string name="guardian_pwd_forget_desc">To protect minors, guardian passwords cannot be reset automatically.\n\nPlease contact customer service for password reset assistance.\n\nCustomer Service Email: info@xingxunliao.com</string>
 </resources>
 
 

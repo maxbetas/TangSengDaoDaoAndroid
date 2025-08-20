@@ -8,6 +8,7 @@ import com.chat.base.utils.WKDialogUtils
 import com.chat.base.utils.WKToastUtils
 import com.chat.security.R
 import com.chat.security.databinding.ActMinorModeBinding
+import com.chat.security.service.GuardianPasswordManager
 
 class MinorModeActivity : WKBaseActivity<ActMinorModeBinding>() {
     
@@ -53,11 +54,15 @@ class MinorModeActivity : WKBaseActivity<ActMinorModeBinding>() {
     override fun initListener() {
         wkVBinding.minorModeSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                // 显示确认对话框
-                showEnableConfirmDialog()
+                // 启用未成年模式 - 需要监护人密码验证
+                verifyGuardianPassword(getString(R.string.minor_mode_warning_title)) {
+                    showEnableConfirmDialog()
+                }
             } else {
-                // 显示关闭确认对话框
-                showDisableConfirmDialog()
+                // 关闭未成年模式 - 需要监护人密码验证
+                verifyGuardianPassword(getString(R.string.minor_mode_title)) {
+                    showDisableConfirmDialog()
+                }
             }
         }
     }
@@ -127,5 +132,22 @@ class MinorModeActivity : WKBaseActivity<ActMinorModeBinding>() {
 
     private fun saveMinorModeState(enabled: Boolean) {
         WKSharedPreferencesUtil.getInstance().putBoolean(MINOR_MODE_KEY, enabled)
+    }
+    
+    /**
+     * 验证监护人密码
+     */
+    private fun verifyGuardianPassword(title: String, onSuccess: () -> Unit) {
+        GuardianPasswordManager.getInstance().verifyPassword(
+            this,
+            title,
+            onSuccess = onSuccess,
+            onCancel = {
+                // 密码验证失败，重置开关状态
+                val currentState = WKSharedPreferencesUtil.getInstance().getBoolean(MINOR_MODE_KEY, false)
+                setSwitchCheckedSafely(currentState)
+                updateSwitchState(currentState)
+            }
+        )
     }
 }
