@@ -5,6 +5,9 @@
             android:name=".ui.SecurityHomeActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.MinorModeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.DestroyAccountActivity"
             android:exported="false" />
     </application>

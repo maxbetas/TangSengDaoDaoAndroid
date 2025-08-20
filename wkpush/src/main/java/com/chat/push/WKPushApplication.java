@@ -146,18 +146,31 @@ public class WKPushApplication {
 
     private void initVIVO() {
         try {
+            Log.d("WKPush", "开始初始化VIVO推送");
             PushClient.getInstance(mContext.get()).initialize();
+            Log.d("WKPush", "VIVO推送初始化完成，开始开启推送");
+            
             PushClient.getInstance(mContext.get()).turnOnPush(state -> {
-                // TODO: 开关状态处理， 0代表成功
-                String regId = PushClient.getInstance(mContext.get()).getRegId();
-                if (!TextUtils.isEmpty(regId)) {
-                    Log.e("获取vivopush", regId);
-                    PushModel.getInstance().registerDeviceToken(regId, pushBundleID,"");
+                Log.d("WKPush", "VIVO推送开关状态: " + state + " (0代表成功)");
+                if (state == 0) {
+                    // 成功开启推送
+                    String regId = PushClient.getInstance(mContext.get()).getRegId();
+                    if (!TextUtils.isEmpty(regId)) {
+                        Log.d("WKPush", "VIVO推送注册成功，RegId: " + regId);
+                        PushModel.getInstance().registerDeviceToken(regId, pushBundleID,"");
+                    } else {
+                        Log.w("WKPush", "VIVO推送开启成功但未获取到RegId");
+                    }
+                } else {
+                    Log.e("WKPush", "VIVO推送开启失败，状态码: " + state);
                 }
             });
 
         } catch (VivoPushException e) {
+            Log.e("WKPush", "VIVO推送初始化异常: " + e.getMessage(), e);
             e.printStackTrace();
+        } catch (Exception e) {
+            Log.e("WKPush", "VIVO推送初始化异常: " + e.getMessage(), e);
         }
     }
     

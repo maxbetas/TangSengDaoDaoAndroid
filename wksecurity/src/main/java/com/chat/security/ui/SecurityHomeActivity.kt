@@ -31,6 +31,9 @@ class SecurityHomeActivity : WKBaseActivity<ActSecurityHomeBinding>() {
         val adapter = SecurityMenuAdapter()
         initAdapter(wkVBinding.recyclerView, adapter)
         val items = mutableListOf<MenuItem>()
+        items.add(MenuItem(getString(R.string.minor_mode_title), getString(R.string.minor_mode_desc)) {
+            startActivity(Intent(this, MinorModeActivity::class.java))
+        })
         items.add(MenuItem(getString(R.string.destroy_account_title), getString(R.string.destroy_account_desc)) {
             startActivity(Intent(this, DestroyAccountActivity::class.java))
         })

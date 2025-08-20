@@ -6,6 +6,18 @@
     <string name="send_sms">Send code</string>
     <string name="confirm_destroy">Confirm delete</string>
     <string name="input_code_hint">Enter SMS code</string>
+    <string name="minor_mode_title">Minor Mode</string>
+    <string name="minor_mode_desc">Protect minors\' healthy internet usage</string>
+    <string name="minor_mode_switch_title">Enable Minor Mode</string>
+    <string name="minor_mode_warning_title">Minor Mode Instructions</string>
+    <string name="minor_mode_warning_content">After enabling Minor Mode:\n\n• Daily usage limited to 40 minutes\n• Cannot use between 10:00 PM and 6:00 AM\n• Parental verification required to disable\n\nThis feature aims to protect minors\' reasonable internet usage and create a healthy online environment.</string>
+    <string name="minor_mode_confirm">Confirm Enable</string>
+    <string name="minor_mode_cancel">Cancel</string>
+    <string name="minor_mode_enabled">Minor Mode enabled</string>
+    <string name="minor_mode_disabled">Minor Mode disabled</string>
+    <string name="minor_mode_status_on">Enabled</string>
+    <string name="minor_mode_status_off">Disabled</string>
+    <string name="minor_mode_filter_tip">When Minor Mode is enabled, sensitive words will be strictly filtered</string>
 </resources>
 
 

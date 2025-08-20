@@ -6,6 +6,18 @@
     <string name="send_sms">获取验证码</string>
     <string name="confirm_destroy">确认注销</string>
     <string name="input_code_hint">请输入短信验证码</string>
+    <string name="minor_mode_title">未成年模式</string>
+    <string name="minor_mode_desc">保护未成年人健康上网</string>
+    <string name="minor_mode_switch_title">启用未成年模式</string>
+    <string name="minor_mode_warning_title">未成年模式说明</string>
+    <string name="minor_mode_warning_content">启用未成年模式后：\n\n• 每天使用时长不超过40分钟\n• 晚上22:00至次日06:00无法使用\n• 需要监护人验证才能关闭此模式\n\n此功能旨在保护未成年人合理使用网络，营造健康的网络环境。</string>
+    <string name="minor_mode_confirm">确认启用</string>
+    <string name="minor_mode_cancel">取消</string>
+    <string name="minor_mode_enabled">未成年模式已启用</string>
+    <string name="minor_mode_disabled">未成年模式已关闭</string>
+    <string name="minor_mode_status_on">已开启</string>
+    <string name="minor_mode_status_off">已关闭</string>
+    <string name="minor_mode_filter_tip">开启未成年人模式后，将严格过滤敏感词</string>
 </resources>
 
 

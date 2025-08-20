@@ -3,6 +3,9 @@
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <!-- vivo推送权限 -->
+    <uses-permission android:name="com.vivo.pushservice.permission.RECEIVE" />
+    <uses-permission android:name="com.push.permission.UPSTAGESERVICE" />
     <!-- 荣耀推送权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -70,11 +73,11 @@
             android:value="484" />
         <meta-data
             android:name="com.vivo.push.api_key"
-            android:value="d14dac0803bc8470d9ace9e29657a160" />
+            android:value="3bc3866eec5d9d9c7036208cf5331dc3" />
 
         <meta-data
             android:name="com.vivo.push.app_id"
-            android:value="105660344" />
+            android:value="105949282" />
 
         <!--honor-->
         <meta-data
